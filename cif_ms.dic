@@ -7609,7 +7609,11 @@ save_ATOM_SITE_ROT_SAWTOOTH
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ROT_SAWTOOTH
-    _category_key.name            '_atom_site_rot_sawtooth.atom_site_label'
+
+    loop_
+      _category_key.name
+         '_atom_site_rot_sawtooth.atom_site_label'
+         '_atom_site_rot_sawtooth.structure_id'
 
 save_
 
@@ -7620,7 +7624,8 @@ save_atom_site_rot_sawtooth.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code that identifies a rigid group in a loop in which a sawtooth
+      The code, along with _atom_site_rot_sawtooth.structure_id, that
+      identifies a rigid group in a loop in which a sawtooth
       function that describes the rotational part of its displacive
       modulation is being defined. This code must match the _atom_site.label
       of the associated coordinate list and conform to the rules described
@@ -7861,6 +7866,24 @@ save_atom_site_rot_sawtooth.matrix_seq_id
 
     _import.get
         [{'file':templ_attr.cif  'save':transf_matrix_id}]
+
+save_
+
+save_atom_site_rot_sawtooth.structure_id
+
+    _definition.id                '_atom_site_rot_sawtooth.structure_id'
+    _definition.update            2026-06-03
+    _description.text
+;
+    A code identifying the structure to which this atom site belongs.
+;
+    _name.category_id             atom_site_rot_sawtooth
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -19071,6 +19094,7 @@ save_
         ATOM_SITE_DISPLACE_ZIGZAG
         ATOM_SITE_OCC_CRENEL
         ATOM_SITE_PHASON
+        ATOM_SITE_ROT_SAWTOOTH
 
         Added _structure.id non-key linked data names to:
         ATOM_SITE_ANHARMONIC_ADP_FOURIER
