@@ -3851,7 +3851,8 @@ save_atom_site_displace_xharm.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-       The code that identifies an atom or rigid group in a loop in which the
+       The code, along with _atom_site_displace_xharm.structure_id, that
+       identifies an atom or rigid group in a loop in which the
        x-harmonics components of its displacive modulation are listed. In
        the case of a rigid group, this list would only include the
        translational part of its displacive modulation. The rotational part
@@ -4016,6 +4017,24 @@ save_atom_site_displace_xharm.order
     _type.contents                Integer
     _enumeration.range            1:
     _units.code                   none
+
+save_
+
+save_atom_site_displace_xharm.structure_id
+
+    _definition.id                '_atom_site_displace_xharm.structure_id'
+    _definition.update            2026-06-03
+    _description.text
+;
+    A code identifying the structure to which this atom site belongs.
+;
+    _name.category_id             atom_site_displace_xharm
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -18853,5 +18872,6 @@ save_
         ATOM_SITE_DISPLACE_FOURIER
         ATOM_SITE_DISPLACE_LEGENDRE
         ATOM_SITE_DISPLACE_ORTHO
+        ATOM_SITE_DISPLACE_XHARM
 
 ;
