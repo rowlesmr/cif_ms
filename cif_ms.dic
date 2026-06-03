@@ -4079,7 +4079,12 @@ save_ATOM_SITE_DISPLACE_ZIGZAG
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_DISPLACE_ZIGZAG
-    _category_key.name            '_atom_site_displace_zigzag.atom_site_label'
+
+    loop_
+      _category_key.name
+         '_atom_site_displace_zigzag.atom_site_label'
+         '_atom_site_displace_zigzag.structure_id'
+
     _description_example.case
 ;
     #\#CIF_2.0
@@ -4134,7 +4139,8 @@ save_atom_site_displace_zigzag.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code that identifies an atom or rigid group in a loop in which
+      The code, along with _atom_site_displace_zigzag.structure_id, that
+      identifies an atom or rigid group in a loop in which
       the zigzag function that describes its displacive modulation is
       being defined. This code must match the _atom_site.label of the
       associated coordinate list and conform to the rules described in
@@ -4235,6 +4241,24 @@ save_atom_site_displace_zigzag.matrix_seq_id
 
     _import.get
         [{'file':templ_attr.cif  'save':transf_matrix_id}]
+
+save_
+
+save_atom_site_displace_zigzag.structure_id
+
+    _definition.id                '_atom_site_displace_zigzag.structure_id'
+    _definition.update            2026-06-03
+    _description.text
+;
+    A code identifying the structure to which this atom site belongs.
+;
+    _name.category_id             atom_site_displace_zigzag
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -18864,6 +18888,7 @@ save_
         Added _structure.id keys to:
         ATOM_SITE_ANHARMONIC_ADP
         ATOM_SITE_DISPLACE_SAWTOOTH
+        ATOM_SITE_DISPLACE_ZIGZAG
 
         Added _structure.id non-key linked data names to:
         ATOM_SITE_ANHARMONIC_ADP_FOURIER
