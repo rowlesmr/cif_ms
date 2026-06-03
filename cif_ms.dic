@@ -24,7 +24,7 @@ data_CIF_MS
     _dictionary.formalism         Modulated
     _dictionary.class             Instance
     _dictionary.version           3.2.5
-    _dictionary.date              2025-12-05
+    _dictionary.date              2026-06-03
     _dictionary.uri               http://www.iucr.org/cif/dic/cif_ms.dic
     _dictionary.ddl_conformance   4.1.0
     _dictionary.namespace         ModStruct
@@ -258,6 +258,7 @@ save_ATOM_SITE_ANHARMONIC_ADP
     loop_
       _category_key.name
          '_atom_site_anharmonic_ADP.atom_site_label'
+         '_atom_site_anharmonic_ADP.structure_id'
          '_atom_site_anharmonic_ADP.tens_elem'
 
     loop_
@@ -531,6 +532,24 @@ save_atom_site_anharmonic_adp.coeff_su
     _units.code                   none
 
     _import.get                   [{'file':templ_attr.cif  'save':general_su}]
+
+save_
+
+save_atom_site_anharmonic_adp.structure_id
+
+    _definition.id                '_atom_site_anharmonic_ADP.structure_id'
+    _definition.update            2026-06-03
+    _description.text
+;
+    A code identifying the structure to which this atom site belongs.
+;
+    _name.category_id             atom_site_anharmonic_ADP
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -18589,7 +18608,7 @@ save_
         2024-12-12
         Technical fixes (JRH)
 ;
-         3.2.5                    2025-12-05
+         3.2.5                    2026-06-03
 ;
         _SPECIAL_FUNC categories, replaced by:
         _DISPLACE_SAWTOOTH
@@ -18667,4 +18686,6 @@ save_
 
         Changed the _category_key.name  of DIFFRN_REFLN and REFLN to
         _diffrn_refln.id and _refln.id, respectively.
+
+        Added _structure.id keys to atom_site_anharmonic_adp
 ;
