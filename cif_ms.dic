@@ -24,7 +24,7 @@ data_CIF_MS
     _dictionary.formalism         Modulated
     _dictionary.class             Instance
     _dictionary.version           3.2.5
-    _dictionary.date              2025-12-05
+    _dictionary.date              2026-06-07
     _dictionary.uri               http://www.iucr.org/cif/dic/cif_ms.dic
     _dictionary.ddl_conformance   4.1.0
     _dictionary.namespace         ModStruct
@@ -17743,6 +17743,28 @@ save_SUPERSPACE_GROUP
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               SUPERSPACE_GROUP
+    _category_key.name            '_superspace_group.id'
+
+save_
+
+save_superspace_group.id
+
+    _definition.id                '_superspace_group.id'
+    _definition.update            2026-06-07
+    _description.text
+;
+    Unique identifier for a super space group.
+
+    Two space groups can share the same identifier if and only if they have
+    the same space group name, number, setting, and have their their symmetry
+    operations listed with the same symop ids (see SUPERSPACE_GROUP_SYMOP).
+;
+    _name.category_id             superspace_group
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -17898,7 +17920,7 @@ save_SUPERSPACE_GROUP_SYMOP
     _definition.id                SUPERSPACE_GROUP_SYMOP
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-06-04
+    _definition.update            2026-06-07
     _description.text
 ;
       The SUPERSPACE_GROUP_SYMOP category contains information about the
@@ -17906,7 +17928,12 @@ save_SUPERSPACE_GROUP_SYMOP
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               SUPERSPACE_GROUP_SYMOP
-    _category_key.name            '_superspace_group_symop.id'
+
+    loop_
+      _category_key.name
+         '_superspace_group_symop.id'
+         '_superspace_group_symop.superspace_group_id'
+
     _description_example.case
 ;
     #\#CIF_2.0
@@ -17997,6 +18024,24 @@ save_superspace_group_symop.operation_algebraic
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Code
+
+save_
+
+save_superspace_group_symop.superspace_group_id
+
+    _definition.id                '_superspace_group_symop.superspace_group_id'
+    _definition.update            2026-06-07
+    _description.text
+;
+    A code which identifies the super space group to which the symop belongs.
+;
+    _name.category_id             superspace_group_symop
+    _name.object_id               superspace_group_id
+    _name.linked_item_id          '_superspace_group.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -18589,7 +18634,7 @@ save_
         2024-12-12
         Technical fixes (JRH)
 ;
-         3.2.5                    2025-12-05
+         3.2.5                    2026-06-07
 ;
         _SPECIAL_FUNC categories, replaced by:
         _DISPLACE_SAWTOOTH
@@ -18667,4 +18712,7 @@ save_
 
         Changed the _category_key.name  of DIFFRN_REFLN and REFLN to
         _diffrn_refln.id and _refln.id, respectively.
+
+        Added key _superspace_group.id and linked key
+        _superspace_group_symop.superspace_group_id
 ;
