@@ -1,3 +1,5 @@
+[![CIF dictionary check](https://github.com/COMCIFS/cif_ms/actions/workflows/main.yml/badge.svg)](https://github.com/COMCIFS/cif_ms/actions)
+
 # The Modulated Structures dictionary
 
 A repository for developing CIF definitions for describing modulated and composite structures. Do

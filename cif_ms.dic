@@ -1,4 +1,5 @@
 #\#CIF_2.0
+# SPDX-License-Identifier: CC-BY-4.0
 ################################################################################
 #                                                                              #
 #                   CIF Dictionary for Modulated Structures                    #
@@ -24,9 +25,10 @@ data_CIF_MS
     _dictionary.formalism         Modulated
     _dictionary.class             Instance
     _dictionary.version           3.2.5
-    _dictionary.date              2026-06-03
+    _dictionary.date              2026-05-02
     _dictionary.uri               http://www.iucr.org/cif/dic/cif_ms.dic
     _dictionary.ddl_conformance   4.1.0
+    _dictionary.licensing_SPDX    CC-BY-4.0
     _dictionary.namespace         ModStruct
     _description.text
 ;
@@ -222,7 +224,7 @@ save_ATOM_SITE_ANHARMONIC_ADP
       environment variation induced by the modulation, the components of
       the tensors describing the anharmonicity could become also modulated.
       In that case, the additional modulation parameters would be
-      described by items belong to the _ATOM_SITE_ANHARMONIC_ADP_FOURIER
+      described by items belong to the ATOM_SITE_ANHARMONIC_ADP_FOURIER
       category.
 
       References: Kuznetsov, P.I., Stratonovich, R.L. & Tikhonov, V.I. (1960).
@@ -383,21 +385,21 @@ save_ATOM_SITE_ANHARMONIC_ADP
           _atom_site_anharmonic_ADP.atom_site_label
           _atom_site_anharmonic_ADP.tens_elem
           _atom_site_anharmonic_ADP.coeff
-          Sb D1111  0.00057(8)
-          Sb D1112  0
-          Sb D1113  0
-          Sb D1122  0.0072(7)
-          Sb D1123  0
-          Sb D1133  0.008(2)
-          Sb D1222  0
-          Sb D1223  0
-          Sb D1233  0
-          Sb D1333  0
-          Sb D2222  0.98(6)
-          Sb D2223  0
-          Sb D2233 -0.82(9)
-          Sb D2333  0
-          Sb D3333  0.24(12)
+          Sb1 D1111  0.00057(8)
+          Sb1 D1112  0
+          Sb1 D1113  0
+          Sb1 D1122  0.0072(7)
+          Sb1 D1123  0
+          Sb1 D1133  0.008(2)
+          Sb1 D1222  0
+          Sb1 D1223  0
+          Sb1 D1233  0
+          Sb1 D1333  0
+          Sb1 D2222  0.98(6)
+          Sb1 D2223  0
+          Sb1 D2233 -0.82(9)
+          Sb1 D2333  0
+          Sb1 D3333  0.24(12)
 
         # - - - - data truncated for brevity - - - -
 
@@ -1164,7 +1166,7 @@ save_atom_site_anharmonic_adp_fourier_param.phase
     _definition.update            2025-10-20
     _description.text
 ;
-       _The phase [\q(j...)n/2\\p], in cycles, of the complex amplitude
+       The phase [\q(j...)n/2\\p], in cycles, of the complex amplitude
        corresponding to the Fourier term defined by
        _atom_site_anharmonic_ADP_Fourier.atom_site_label,
        _atom_site_anharmonic_ADP_Fourier.tens_elem and
@@ -1217,7 +1219,7 @@ save_atom_site_anharmonic_adp_fourier_param.sin
       The sine coefficient [T(j...)sn] corresponding to the Fourier term
       defined by _atom_site_anharmonic_ADP_Fourier.atom_site_label,
       _atom_site_anharmonic_ADP_Fourier.tens_elem and
-      _atom_site_anharmonic_AD_Fourier.wave_vector_seq_id.
+      _atom_site_anharmonic_ADP_Fourier.wave_vector_seq_id.
 ;
     _name.category_id             atom_site_anharmonic_ADP_Fourier_param
     _name.object_id               sin
@@ -1400,7 +1402,7 @@ save_atom_site_anharmonic_adp_legendre.tens_elem
       A label identifying the anharmonic ADP tensor elements of a given
       atom whose modulation is being parameterized by Legendre polynomials.
       This code must match one of the codes listed in
-      'atom_site_anharmonic_ADP.tens_elem.
+      _atom_site_anharmonic_ADP.tens_elem.
 ;
     _name.category_id             atom_site_anharmonic_ADP_Legendre
     _name.object_id               tens_elem
@@ -2393,7 +2395,7 @@ save_atom_site_displace_fourier_param.cos
       The cosine coefficient (Acn) corresponding to the Fourier term defined
       by _atom_site_displace_Fourier.atom_site_label,
       _atom_site_displace_Fourier.axis and
-      _atom_site_displace_Fourier_wave_vector.seq_id.
+      _atom_site_displace_Fourier.wave_vector_seq_id.
 ;
     _name.category_id             atom_site_displace_Fourier_param
     _name.object_id               cos
@@ -3190,7 +3192,7 @@ save_atom_site_displace_ortho.func_id
 ;
       A code identifying the orthogonalized function used in the
       structural model to describe the displacive modulation of an atom
-      or rigid group. This code must match _atom_sites_ortho_func_id.
+      or rigid group. This code must match _atom_sites_ortho.func_id.
 ;
     _name.category_id             atom_site_displace_ortho
     _name.object_id               func_id
@@ -3455,7 +3457,7 @@ save_atom_site_displace_sawtooth.ax_su
      Standard uncertainty of _atom_site_displace_sawtooth.ax
 ;
     _name.category_id             atom_site_displace_sawtooth
-    _name.object_id               sawtooth_ax_su
+    _name.object_id               ax_su
     _name.linked_item_id          '_atom_site_displace_sawtooth.ax'
     _units.code                   none
 
@@ -4309,7 +4311,7 @@ save_ATOM_SITE_FOURIER_WAVE_VECTOR
       details about the wave vectors of the Fourier terms used in the
       structural model to describe the atomic modulation functions. They
       are linear combinations with integer coefficients of the independent
-      wave vectors given in the _cell_wave_vector. list. Therefore, wave
+      wave vectors given in the CELL_WAVE_VECTOR list. Therefore, wave
       vectors are expressed with respect to the three-dimensional reciprocal
       basis that spans the lattice of main reflections. However, in the
       case of composites these wave vectors are expressed with respect to
@@ -4320,13 +4322,13 @@ save_ATOM_SITE_FOURIER_WAVE_VECTOR
       components (see item _atom_site_Fourier_wave_vector.x,
       _atom_site_Fourier_wave_vector.y and _atom_site_Fourier_wave_vector.z)
       or expressed as k=n(1)q(1)+...+n(p)q(p), where p is given by
-      _cell_modulation_dimension (with a maximum value of 8).
+      _cell.modulation_dimension (with a maximum value of 8).
 
-      In that case, _atom_site_Fourier_wave_vector.coeff contains the
+      In that case, _atom_site_Fourier_wave_vector.q_coeff contains the
       coefficients that express a given k as a linear combination of the
       independent wave vectors given in the CELL_WAVE_VECTOR category. The
       enumeration of the independent wave vectors (1,2, ...,9) is given by
-      the value of _atom_site_Fourier_wave_vector_.q_coeff_seq_id matching
+      the value of _atom_site_Fourier_wave_vector.q_coeff_seq_id matching
       the corresponding value of _cell_wave_vector.seq_id.
 
 ;
@@ -4751,10 +4753,10 @@ save_atom_site_fourier_wave_vector.q_coeff
     _description.text
 ;
       The list of coefficients that express a given k as a linear combination
-      of the _cell_modulation_dimension independent wave vectors given in
+      of the _cell.modulation_dimension independent wave vectors given in
       CELL_WAVE_VECTOR category. The enumeration of the independent wave
       vectors (1,2, ...,9) is given by thes value of
-      _atom_site_Fourier_wave_vector_.q_coeff_seq_id matching the
+      _atom_site_Fourier_wave_vector.q_coeff_seq_id matching the
       corresponding value of _cell_wave_vector.seq_id
 ;
     _name.category_id             atom_site_Fourier_wave_vector
@@ -4803,7 +4805,7 @@ save_atom_site_fourier_wave_vector.q_coeff_seq_id
       The list of numeric codes that identifies each independent wave vector
       appearing in the linear combination that expresses a generic
       Fourier wave vector as k=n(1)q(1)+...+n(p)q(p), where p is given
-      by _cell_modulation_dimension. In the case of composites these wave
+      by _cell.modulation_dimension. In the case of composites these wave
       vectors are expressed with respect to the three-dimensional reciprocal
       basis of each subsystem (see _cell_subsystem.matrix_W_).The codes
       must match those given in _cell_wave_vector.seq_id.
@@ -5303,8 +5305,8 @@ save_ATOM_SITE_OCC_FOURIER
         Sn Sn  H  0          0            0           0.01480(12)  d . 0.851(2)
         Cu Cu  H  0.0029(9)  0.0057(5)    0.1147(3)   0.0229(11)   d . 0.149(2)
         S  S1  H  0.5033(2)  0.84278(12)  0.12342(7)  0.0177(3)    d . 1
-        Pb Pb  Q  0.05541(5) 0.24113(4)   0.36783(2)  0.03573(12)  d . 0.701(10
-        Sb Sb  Q  0.055408   0.241132     0.367832    0.03573(12)  d . 0.299(10
+        Pb Pb  Q  0.05541(5) 0.24113(4)   0.36783(2)  0.03573(12)  d . 0.701(10)
+        Sb Sb  Q  0.055408   0.241132     0.367832    0.03573(12)  d . 0.299(10)
         S  S2  Q -0.0402(3)  0.2583(2)    0.59639(13) 0.0310(4)    d . 1
 
         loop_
@@ -5499,8 +5501,8 @@ save_ATOM_SITE_OCC_FOURIER_PARAM
         Sn Sn  H  0          0            0           0.01480(12)  d . 0.851(2)
         Cu Cu  H  0.0029(9)  0.0057(5)    0.1147(3)   0.0229(11)   d . 0.149(2)
         S  S1  H  0.5033(2)  0.84278(12)  0.12342(7)  0.0177(3)    d . 1
-        Pb Pb  Q  0.05541(5) 0.24113(4)   0.36783(2)  0.03573(12)  d . 0.701(10
-        Sb Sb  Q  0.055408   0.241132     0.367832    0.03573(12)  d . 0.299(10
+        Pb Pb  Q  0.05541(5) 0.24113(4)   0.36783(2)  0.03573(12)  d . 0.701(10)
+        Sb Sb  Q  0.055408   0.241132     0.367832    0.03573(12)  d . 0.299(10)
         S  S2  Q -0.0402(3)  0.2583(2)    0.59639(13) 0.0310(4)    d . 1
 
         loop_
@@ -5907,7 +5909,7 @@ save_ATOM_SITE_OCC_ORTHO
 
       Data items in the ATOM_SITE_OCC_ORTHO category record
       details about the orthogonalized functions (see
-      ATOM_SITE_DISPLACE_ORTHO)defined to solve correlation problems
+      ATOM_SITE_DISPLACE_ORTHO) defined to solve correlation problems
       during the refinement of the occupational modulation when the atomic
       domain of a given atom is restricted by a crenel function. The
       functions are constructed selecting Fourier harmonics until the
@@ -5995,7 +5997,7 @@ save_atom_site_occ_ortho.func_id
 ;
       A code identifying the orthogonalized function used in the
       structural model to describe the occupational modulation of an atom
-      or rigid group. This code must match _atom_sites_ortho_func_id.
+      or rigid group. This code must match _atom_sites_ortho.func_id.
 ;
     _name.category_id             atom_site_occ_ortho
     _name.object_id               func_id
@@ -6753,7 +6755,7 @@ save_ATOM_SITE_ROT_FOURIER_PARAM
         loop_
          _cell_wave_vector.seq_id
          _cell_wave_vector.xyz
-          1  [0,0.780(3),0]
+          1  [0 0.780(3) 0]
 
         # - - - - data truncated for brevity - - - -
 
@@ -7514,7 +7516,7 @@ save_atom_site_rot_ortho.func_id
       structural model to describe the displacive modulation of an atom
       or rigid group. In the case of a rigid group, it applies only
       to the rotational part of the distortion. This code must match
-      _atom_sites_ortho_func_id.
+      _atom_sites_ortho.func_id.
 ;
     _name.category_id             atom_site_rot_ortho
     _name.object_id               func_id
@@ -7677,7 +7679,7 @@ save_atom_site_rot_sawtooth.ax_su
      Standard uncertainty of _atom_site_rot_sawtooth.ax
 ;
     _name.category_id             atom_site_rot_sawtooth
-    _name.object_id               sawtooth_ax_su
+    _name.object_id               ax_su
     _name.linked_item_id          '_atom_site_rot_sawtooth.ax'
     _units.code                   degrees
 
@@ -8184,7 +8186,7 @@ save_atom_site_rot_zigzag.atom_site_label
       a zigzag function that describes the rotational part of its displacive
       modulation is being defined. This code must match the _atom_site.label
       of the associated coordinate list and conform to the rules described
-      in_atom_site.label.
+      in _atom_site.label.
 ;
     _name.category_id             atom_site_rot_zigzag
     _name.object_id               atom_site_label
@@ -10307,7 +10309,7 @@ save_atom_sites_ortho.coeff_cos_list
     _description.text
 ;
       The list of cosine components of an orthogonalized function
-      labeled by atom_sites_ortho.func_id corresponding to the wave
+      labeled by _atom_sites_ortho.func_id corresponding to the wave
       vector list given by _atom_sites_ortho.wave_vector_seq_id_list
 ;
     _name.category_id             atom_sites_ortho
@@ -10329,11 +10331,11 @@ save_atom_sites_ortho.coeff_sin_list
     _description.text
 ;
       The list of sine components of an orthogonalized function
-      labeled by atom_sites_ortho.func_id corresponding to the wave
+      labeled by _atom_sites_ortho.func_id corresponding to the wave
       vector list given by _atom_sites_ortho.wave_vector_seq_id_list
 ;
     _name.category_id             atom_sites_ortho
-    _name.object_id               coeff_sin
+    _name.object_id               coeff_sin_list
     _type.purpose                 Number
     _type.source                  Assigned
     _type.container               List
@@ -10867,28 +10869,28 @@ save_CELL_SUBSYSTEM
      _cell_subsystem.description
      _cell_subsystem.matrix_W
       1 '1-st subsystem: CoO3'
-      [[1 0 0 0 0 0 0 0 0 0 0] \
-       [0 1 0 0 0 0 0 0 0 0 0] \
-       [0 0 1 0 0 0 0 0 0 0 0] \
-       [0 0 0 1 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
+      [[1 0 0 0 0 0 0 0 0 0 0]
+       [0 1 0 0 0 0 0 0 0 0 0]
+       [0 0 1 0 0 0 0 0 0 0 0]
+       [0 0 0 1 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
        [0 0 0 0 0 0 0 0 0 0 0]]
       2 '2-nd subsystem: Sr'
-      [[1 0 0 0 0 0 0 0 0 0 0] \
-       [0 1 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 1 0 0 0 0 0 0 0] \
-       [0 0 1 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
-       [0 0 0 0 0 0 0 0 0 0 0] \
+      [[1 0 0 0 0 0 0 0 0 0 0]
+       [0 1 0 0 0 0 0 0 0 0 0]
+       [0 0 0 1 0 0 0 0 0 0 0]
+       [0 0 1 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
+       [0 0 0 0 0 0 0 0 0 0 0]
        [0 0 0 0 0 0 0 0 0 0 0]]
 
     # - - - - data truncated for brevity - - - -
@@ -10958,7 +10960,7 @@ save_cell_subsystem.matrix_w
       defined in van Smaalen (1991);  [see also van Smaalen (1995) or
       van Smaalen (2012)].
       Its dimension must match
-      (_cell_modulation_dimension+3)*(_cell_modulation_dimension+3).
+      (_cell.modulation_dimension+3)*(_cell.modulation_dimension+3).
 
       Intergrowth compounds are composed of several periodic
       substructures in which the reciprocal lattices of two different
@@ -11007,7 +11009,7 @@ save_cell_subsystem.matrix_w
       *_subsystem_code pointers, the cell parameters, the superspace
       group and the measured modulation wave vectors (see
       CELL_WAVE_VECTOR below) correspond to the reciprocal basis
-      described in _cell_reciprocal_basis_description and coincide
+      described in _cell.reciprocal_basis_description and coincide
       with the reciprocal basis of the specific subsystem (if any)
       whose W matrix is the unit matrix. The cell parameters and the
       symmetry of the remaining subsystems can be derived using the
@@ -14099,7 +14101,7 @@ save_cell_wave_vector.xyz
       the case of composites, the modulation wave vectors of each
       subsystem are expressed in terms of the reciprocal basis of its
       corresponding reference structure. Their number must match
-      _cell_modulation_dimension. In the case of composites described
+      _cell.modulation_dimension. In the case of composites described
       in a single data block, the wave
       vectors are expressed in the three-dimensional basis chosen as
       reference in _cell.reciprocal_basis_description, which would
@@ -14661,7 +14663,7 @@ save_diffrn_refln.index_m_list
 ;
       Additional Miller indices needed to write the reciprocal vector
       of a certain reflection in the basis described in
-      _cell_reciprocal_basis_description. Following the usual
+      _cell.reciprocal_basis_description. Following the usual
       convention, such a vector would be expressed as
 
                H=h*a*+k*b*+l*c*+m1*q(1)+...+m9*q(9),
@@ -15736,7 +15738,7 @@ save_exptl_crystal_face.index_m_list
     _description.text
 ;
       Additional Miller indices of the crystal face associated with the
-      value _exptl_crystal_face_perp_dist when the face is indexed
+      value _exptl_crystal_face.perp_dist when the face is indexed
       using a multidimensional scheme. The total number of indices must
       match (_cell.modulation_dimension + 3). The order of the indices
       must be consistent with the codes given in
@@ -16210,7 +16212,7 @@ save_geom_bond.distance_av_su
      Standard uncertainty of _geom_bond.distance_av
 ;
     _name.category_id             geom_bond
-    _name.object_id               av_su
+    _name.object_id               distance_av_su
     _name.linked_item_id          '_geom_bond.distance_av'
     _units.code                   angstroms
 
@@ -16248,7 +16250,7 @@ save_geom_bond.distance_max_su
      Standard uncertainty of _geom_bond.distance_max
 ;
     _name.category_id             geom_bond
-    _name.object_id               max_su
+    _name.object_id               distance_max_su
     _name.linked_item_id          '_geom_bond.distance_max'
     _units.code                   angstroms
 
@@ -16374,7 +16376,7 @@ save_geom_contact.distance_av_su
      Standard uncertainty of _geom_contact.distance_av
 ;
     _name.category_id             geom_contact
-    _name.object_id               av_su
+    _name.object_id               distance_av_su
     _name.linked_item_id          '_geom_contact.distance_av'
     _units.code                   angstroms
 
@@ -16412,7 +16414,7 @@ save_geom_contact.distance_max_su
      Standard uncertainty of _geom_contact.distance_max
 ;
     _name.category_id             geom_contact
-    _name.object_id               max_su
+    _name.object_id               distance_max_su
     _name.linked_item_id          '_geom_contact.distance_max'
     _units.code                   angstroms
 
@@ -16519,7 +16521,7 @@ save_geom_hbond.angle_dha_av
     _description.text
 ;
      The average value of the angle subtended by the sites identified by
-     the _geom_hbond key names.The hydrogen at site *_H is at the apex
+     the GEOM_HBOND key names. The hydrogen at site *_H is at the apex
      of the angle.
 ;
     _name.category_id             geom_hbond
@@ -16559,7 +16561,7 @@ save_geom_hbond.angle_dha_max
     _description.text
 ;
      The maximum value of the angle subtended by the sites identified by
-     the _geom_hbond key names.The hydrogen at site *_H is at the apex
+     the GEOM_HBOND key names. The hydrogen at site *_H is at the apex
      of the angle.
 ;
     _name.category_id             geom_hbond
@@ -16599,7 +16601,7 @@ save_geom_hbond.angle_dha_min
     _description.text
 ;
      The minimum value of the angle subtended by the sites identified by
-     the _geom_hbond key names.The hydrogen at site *_H is at the apex
+     the GEOM_HBOND key names. The hydrogen at site *_H is at the apex
      of the angle.
 ;
     _name.category_id             geom_hbond
@@ -16639,7 +16641,7 @@ save_geom_hbond.distance_da_av
     _description.text
 ;
      The average distance between the donor and acceptor sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_DA_av
@@ -16678,7 +16680,7 @@ save_geom_hbond.distance_da_max
     _description.text
 ;
      The maximum distance between the donor and acceptor sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_DA_max
@@ -16717,7 +16719,7 @@ save_geom_hbond.distance_da_min
     _description.text
 ;
      The minimum distance between the donor and acceptor sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_DA_min
@@ -16756,7 +16758,7 @@ save_geom_hbond.distance_dh_av
     _description.text
 ;
      The average distance between the donor and hydrogen sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_DH_av
@@ -16777,7 +16779,6 @@ save_geom_hbond.distance_dh_av_su
 ;
      Standard uncertainty of the average angle given in
      _geom_hbond.distance_DH_av.
-
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_DH_av_su
@@ -16796,7 +16797,7 @@ save_geom_hbond.distance_dh_max
     _description.text
 ;
      The maximum distance between the donor and hydrogen sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_DH_max
@@ -16835,7 +16836,7 @@ save_geom_hbond.distance_dh_min
     _description.text
 ;
      The minimum distance between the donor and hydrogen sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_DH_min
@@ -16874,7 +16875,7 @@ save_geom_hbond.distance_ha_av
     _description.text
 ;
      The average distance between the hydrogen and acceptor sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_HA_av
@@ -16913,7 +16914,7 @@ save_geom_hbond.distance_ha_max
     _description.text
 ;
      The maximum distance between the hydrogen and acceptor sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_HA_max
@@ -16952,7 +16953,7 @@ save_geom_hbond.distance_ha_min
     _description.text
 ;
      The minimum distance between the hydrogen and acceptor sites in the
-     hydrogen bond identified by the _geom_hbond key names.
+     hydrogen bond identified by the GEOM_HBOND key names.
 ;
     _name.category_id             geom_hbond
     _name.object_id               distance_HA_min
@@ -17714,7 +17715,7 @@ save_refln.index_m_list
     _description.text
 ;
       Additional Miller indices of a particular reflection in the basis
-      described in _cell_reciprocal_basis_description. The total number
+      described in _cell.reciprocal_basis_description. The total number
       of indices must match (_cell.modulation_dimension + 3). The
       order of the additional indices must be consistent with the codes
       given in _cell_wave_vector.seq_id.
@@ -18160,7 +18161,7 @@ save_reflns.limit_index_m_max_list
 ;
       Maximum of the additional Miller indices
       appearing in _refln.index_m_. The number of ranges must match
-      _cell_modulation_dimension. The order of the additional indices
+      _cell.modulation_dimension. The order of the additional indices
       must be consistent with the codes given in
       _cell_wave_vector.seq_id. These need not be the same as
       the _diffrn_reflns.limit_index_m_max_list.
@@ -18209,7 +18210,7 @@ save_reflns.limit_index_m_min_list
 ;
       Minimum values of the additional Miller indices
       appearing in _refln.index_m_. The number of ranges must match
-      _cell_modulation_dimension. The order of the additional indices
+      _cell.modulation_dimension. The order of the additional indices
       must be consistent with the codes given in
       _cell_wave_vector.seq_id. These need not be the same as
       the _diffrn_reflns.limit_index_m_min_list.
@@ -18519,7 +18520,7 @@ save_superspace_group_symop.operation_algebraic
       A parsable string giving one of the symmetry operations of the
       superspace group in algebraic form. These data will generally be
       repeated in a loop. Use symbols as necessary according to
-      _cell_modulation_dimension.
+      _cell.modulation_dimension.
       All symmetry operations should be entered, including the
       identity operation, those for lattice centring and that for
       a centre of symmetry, if present. The symbolic notation for
@@ -19127,7 +19128,7 @@ save_
         2024-12-12
         Technical fixes (JRH)
 ;
-         3.2.5                    2026-06-03
+         3.2.5                    2026-05-02
 ;
         _SPECIAL_FUNC categories, replaced by:
         _DISPLACE_SAWTOOTH
@@ -19206,6 +19207,7 @@ save_
         Changed the _category_key.name  of DIFFRN_REFLN and REFLN to
         _diffrn_refln.id and _refln.id, respectively.
 
+        2026-05-02
         Added _structure.id keys to:
         ATOM_SITE_ANHARMONIC_ADP
         ATOM_SITE_DISPLACE_SAWTOOTH
