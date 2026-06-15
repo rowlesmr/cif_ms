@@ -9978,10 +9978,10 @@ save_cell.commen_supercell_matrix
     _cell.commen_supercell_matrix =                                           \
       [ [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
         c.commen_supercell_matrix_1_3],                                       \
-        [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
-        c.commen_supercell_matrix_1_3],                                       \
-        [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
-        c.commen_supercell_matrix_1_3] ]
+        [c.commen_supercell_matrix_2_1, c.commen_supercell_matrix_2_2,        \
+        c.commen_supercell_matrix_2_3],                                       \
+        [c.commen_supercell_matrix_3_1, c.commen_supercell_matrix_3_2,        \
+        c.commen_supercell_matrix_3_3] ]
 ;
 
 save_
