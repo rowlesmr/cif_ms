@@ -25,7 +25,7 @@ data_CIF_MS
     _dictionary.formalism         Modulated
     _dictionary.class             Instance
     _dictionary.version           3.2.5
-    _dictionary.date              2026-05-02
+    _dictionary.date              2026-06-15
     _dictionary.uri               http://www.iucr.org/cif/dic/cif_ms.dic
     _dictionary.ddl_conformance   4.1.0
     _dictionary.licensing_SPDX    CC-BY-4.0
@@ -18658,7 +18658,7 @@ save_
         2024-12-12
         Technical fixes (JRH)
 ;
-         3.2.5                    2026-05-02
+         3.2.5                    2026-06-15
 ;
         _SPECIAL_FUNC categories, replaced by:
         _DISPLACE_SAWTOOTH
@@ -18736,4 +18736,8 @@ save_
 
         Changed the _category_key.name  of DIFFRN_REFLN and REFLN to
         _diffrn_refln.id and _refln.id, respectively.
+
+        2026-06-15
+        Added linked key *.structure_id data names to ATOM_SITES_AXES,
+        ATOM_SITES_MODULATION, and ATOM_SITES_ORTHO.
 ;
