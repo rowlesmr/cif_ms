@@ -3299,7 +3299,7 @@ save_atom_site_displace_sawtooth.ax_su
      Standard uncertainty of _atom_site_displace_sawtooth.ax
 ;
     _name.category_id             atom_site_displace_sawtooth
-    _name.object_id               sawtooth_ax_su
+    _name.object_id               ax_su
     _name.linked_item_id          '_atom_site_displace_sawtooth.ax'
     _units.code                   none
 
@@ -7275,7 +7275,7 @@ save_atom_site_rot_sawtooth.ax_su
      Standard uncertainty of _atom_site_rot_sawtooth.ax
 ;
     _name.category_id             atom_site_rot_sawtooth
-    _name.object_id               sawtooth_ax_su
+    _name.object_id               ax_su
     _name.linked_item_id          '_atom_site_rot_sawtooth.ax'
     _units.code                   degrees
 
@@ -9795,7 +9795,7 @@ save_atom_sites_ortho.coeff_sin_list
       vector list given by _atom_sites_ortho.wave_vector_seq_id_list
 ;
     _name.category_id             atom_sites_ortho
-    _name.object_id               coeff_sin
+    _name.object_id               coeff_sin_list
     _type.purpose                 Number
     _type.source                  Assigned
     _type.container               List
@@ -15672,7 +15672,7 @@ save_geom_bond.distance_av_su
      Standard uncertainty of _geom_bond.distance_av
 ;
     _name.category_id             geom_bond
-    _name.object_id               av_su
+    _name.object_id               distance_av_su
     _name.linked_item_id          '_geom_bond.distance_av'
     _units.code                   angstroms
 
@@ -15710,7 +15710,7 @@ save_geom_bond.distance_max_su
      Standard uncertainty of _geom_bond.distance_max
 ;
     _name.category_id             geom_bond
-    _name.object_id               max_su
+    _name.object_id               distance_max_su
     _name.linked_item_id          '_geom_bond.distance_max'
     _units.code                   angstroms
 
@@ -15836,7 +15836,7 @@ save_geom_contact.distance_av_su
      Standard uncertainty of _geom_contact.distance_av
 ;
     _name.category_id             geom_contact
-    _name.object_id               av_su
+    _name.object_id               distance_av_su
     _name.linked_item_id          '_geom_contact.distance_av'
     _units.code                   angstroms
 
@@ -15874,7 +15874,7 @@ save_geom_contact.distance_max_su
      Standard uncertainty of _geom_contact.distance_max
 ;
     _name.category_id             geom_contact
-    _name.object_id               max_su
+    _name.object_id               distance_max_su
     _name.linked_item_id          '_geom_contact.distance_max'
     _units.code                   angstroms
 
