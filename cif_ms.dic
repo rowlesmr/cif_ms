@@ -2796,7 +2796,7 @@ save_ATOM_SITE_DISPLACE_ORTHO
     _definition.id                ATOM_SITE_DISPLACE_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-06-04
+    _definition.update            2026-06-15
     _description.text
 ;
       Data items in the ATOM_SITE_DISPLACE_ORTHO category record
@@ -2864,11 +2864,11 @@ save_ATOM_SITE_DISPLACE_ORTHO
          _atom_site_Fourier_wave_vector.seq_id
          _atom_site_Fourier_wave_vector.q_coeff_seq_id
          _atom_site_Fourier_wave_vector.q_coeff
-            0  [1]  [0]
-            1  [1]  [1]
-            2  [1]  [2]
-            3  [1]  [3]
-            4  [1]  [4]
+            1  [1]  [0]
+            2  [1]  [1]
+            3  [1]  [2]
+            4  [1]  [3]
+            5  [1]  [4]
 
         # - - - - data truncated for brevity - - - -
 
@@ -2892,16 +2892,16 @@ save_ATOM_SITE_DISPLACE_ORTHO
          _atom_sites_ortho.wave_vector_seq_id_list
          _atom_sites_ortho.coeff_cos_list
          _atom_sites_ortho.coeff_sin_list
-         o1  [0 1]      [-3.322 0]        [0 4.323]
-         o2  [0 1]      [-20.803 11.454]  [0 31.365]
-         o3  [0 1]      [0.497 0]         [0 1.774]
-         o4  [0 1]      [0 1.287]         [0 0]
-         o5  [0 1 2]    [0 0.199 0]       [0 0 1.417]
-         o6  [0 1 2]    [-0.870 0 2.020]  [0 -1.611 0]
-         o7  [0 1]      [2.069 0]         [0 3.249]
-         o8  [0 1]      [0 1.414]         [0 0]
-         o9  [0 1 2]    [0 2.271 0]       [0 0 2.267]
-         o10 [0 1 2]    [2.187 0 1.973]   [0 2.785 0]
+         o1  [1 2]      [-3.322 0]        [0 4.323]
+         o2  [1 2]      [-20.803 11.454]  [0 31.365]
+         o3  [1 2]      [0.497 0]         [0 1.774]
+         o4  [1 2]      [0 1.287]         [0 0]
+         o5  [1 2 3]    [0 0.199 0]       [0 0 1.417]
+         o6  [1 2 3]    [-0.870 0 2.020]  [0 -1.611 0]
+         o7  [1 2]      [2.069 0]         [0 3.249]
+         o8  [1 2]      [0 1.414]         [0 0]
+         o9  [1 2 3]    [0 2.271 0]       [0 0 2.267]
+         o10 [1 2 3]    [2.187 0 1.973]   [0 2.785 0]
 
         loop_
          _atom_site_displace_ortho.id
@@ -9669,7 +9669,7 @@ save_ATOM_SITES_ORTHO
     _definition.id                ATOM_SITES_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2024-08-09
+    _definition.update            2026-06-15
     _description.text
 ;
 
@@ -9720,11 +9720,11 @@ save_ATOM_SITES_ORTHO
      _atom_site_Fourier_wave_vector.seq_id
      _atom_site_Fourier_wave_vector.q_coeff_seq_id
      _atom_site_Fourier_wave_vector.q_coeff
-        0  [1]  [0]
-        1  [1]  [1]
-        2  [1]  [2]
-        3  [1]  [3]
-        4  [1]  [4]
+        1  [1]  [0]
+        2  [1]  [1]
+        3  [1]  [2]
+        4  [1]  [3]
+        5  [1]  [4]
 
     # - - - - data truncated for brevity - - - -
 
@@ -9742,16 +9742,16 @@ save_ATOM_SITES_ORTHO
      _atom_sites_ortho.wave_vector_seq_id_list
      _atom_sites_ortho.coeff_cos_list
      _atom_sites_ortho.coeff_sin_list
-     o1  [0 1]      [-3.322 0]        [0 4.323]
-     o2  [0 1]      [-20.803 11.454]  [0 31.365]
-     o3  [0 1]      [0.497 0]         [0 1.774]
-     o4  [0 1]      [0 1.287]         [0 0]
-     o5  [0 1 2]    [0 0.199 0]       [0 0 1.417]
-     o6  [0 1 2]    [-0.870 0 2.020]  [0 -1.611 0]
-     o7  [0 1]      [2.069 0]         [0 3.249]
-     o8  [0 1]      [0 1.414]         [0 0]
-     o9  [0 1 2]    [0 2.271 0]       [0 0 2.267]
-     o10 [0 1 2]    [2.187 0 1.973]   [0 2.785 0]
+     o1  [1 2]      [-3.322 0]        [0 4.323]
+     o2  [1 2]      [-20.803 11.454]  [0 31.365]
+     o3  [1 2]      [0.497 0]         [0 1.774]
+     o4  [1 2]      [0 1.287]         [0 0]
+     o5  [1 2 3]    [0 0.199 0]       [0 0 1.417]
+     o6  [1 2 3]    [-0.870 0 2.020]  [0 -1.611 0]
+     o7  [1 2]      [2.069 0]         [0 3.249]
+     o8  [1 2]      [0 1.414]         [0 0]
+     o9  [1 2 3]    [0 2.271 0]       [0 0 2.267]
+     o10 [1 2 3]    [2.187 0 1.973]   [0 2.785 0]
 
     # - - - - data truncated for brevity - - - -
 
