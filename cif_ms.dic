@@ -25,11 +25,11 @@ data_CIF_MS
     _dictionary.formalism         Modulated
     _dictionary.class             Instance
     _dictionary.version           3.2.5
-    _dictionary.date              2026-05-02
+    _dictionary.date              2026-06-18
     _dictionary.uri               http://www.iucr.org/cif/dic/cif_ms.dic
-    _dictionary.ddl_conformance   4.1.0
+    _dictionary.ddl_conformance   4.2.0
     _dictionary.licensing_SPDX    CC-BY-4.0
-    _dictionary.namespace         ModStruct
+    _dictionary.namespace         CifCore
     _description.text
 ;
        The DICTIONARY group encompassing the definitions of data items
@@ -42,7 +42,7 @@ save_CIF_MS_HEAD
     _definition.id                CIF_MS_HEAD
     _definition.scope             Category
     _definition.class             Head
-    _definition.update            2025-12-05
+    _definition.update            2026-06-18
     _description.text
 ;
       Encompasses groups of categories applicable to modulated structures.
@@ -52,8 +52,8 @@ save_CIF_MS_HEAD
 
     _import.get
         [
-         {'dupl':Ignore  'file':multi_block_core.dic  'mode':Full
-          'save':MULTIBLOCK_CORE}
+         {'dupl':Ignore  'file':cif_core_multiblock.dic  'mode':Full
+          'save':CIF_CORE_MULTIBLOCK_HEAD}
          {'dupl':Ignore  'file':cif_twin.dic  'mode':Full  'save':CIF_TWIN_HEAD}
         ]
 
@@ -9228,7 +9228,9 @@ save_ATOM_SITES_DISPLACE_FOURIER
     _definition.id                ATOM_SITES_DISPLACE_FOURIER
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2024-08-09
+    _definition_replaced.id       1
+    _definition_replaced.by       .
+    _definition.update            2026-06-15
     _description.text
 ;
       Data items in the ATOM_SITES_DISPLACE_FOURIER category record
@@ -9946,7 +9948,7 @@ save_
 save_cell.commen_supercell_matrix
 
     _definition.id                '_cell.commen_supercell_matrix'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
       For commensurately modulated structures the transformation, T,
@@ -9964,7 +9966,7 @@ save_cell.commen_supercell_matrix
     _type.source                  Derived
     _type.container               Matrix
     _type.dimension               '[3,3]'
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          [
                                    [1  0  0]  [0  1  0]  [0  0  1]
                                   ]
@@ -9978,10 +9980,10 @@ save_cell.commen_supercell_matrix
     _cell.commen_supercell_matrix =                                           \
       [ [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
         c.commen_supercell_matrix_1_3],                                       \
-        [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
-        c.commen_supercell_matrix_1_3],                                       \
-        [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
-        c.commen_supercell_matrix_1_3] ]
+        [c.commen_supercell_matrix_2_1, c.commen_supercell_matrix_2_2,        \
+        c.commen_supercell_matrix_2_3],                                       \
+        [c.commen_supercell_matrix_3_1, c.commen_supercell_matrix_3_2,        \
+        c.commen_supercell_matrix_3_3] ]
 ;
 
 save_
@@ -9990,7 +9992,7 @@ save_cell.commen_supercell_matrix_1_1
 
     _definition.id                '_cell.commen_supercell_matrix_1_1'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_1_1'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10000,7 +10002,7 @@ save_cell.commen_supercell_matrix_1_1
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          1
     _units.code                   none
     _method.purpose               Evaluation
@@ -10017,7 +10019,7 @@ save_cell.commen_supercell_matrix_1_2
 
     _definition.id                '_cell.commen_supercell_matrix_1_2'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_1_2'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10027,7 +10029,7 @@ save_cell.commen_supercell_matrix_1_2
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10044,7 +10046,7 @@ save_cell.commen_supercell_matrix_1_3
 
     _definition.id                '_cell.commen_supercell_matrix_1_3'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_1_3'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10054,7 +10056,7 @@ save_cell.commen_supercell_matrix_1_3
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10071,7 +10073,7 @@ save_cell.commen_supercell_matrix_2_1
 
     _definition.id                '_cell.commen_supercell_matrix_2_1'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_2_1'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10081,7 +10083,7 @@ save_cell.commen_supercell_matrix_2_1
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10098,7 +10100,7 @@ save_cell.commen_supercell_matrix_2_2
 
     _definition.id                '_cell.commen_supercell_matrix_2_2'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_2_2'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10108,7 +10110,7 @@ save_cell.commen_supercell_matrix_2_2
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          1
     _units.code                   none
     _method.purpose               Evaluation
@@ -10125,7 +10127,7 @@ save_cell.commen_supercell_matrix_2_3
 
     _definition.id                '_cell.commen_supercell_matrix_2_3'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_2_3'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10135,7 +10137,7 @@ save_cell.commen_supercell_matrix_2_3
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10152,7 +10154,7 @@ save_cell.commen_supercell_matrix_3_1
 
     _definition.id                '_cell.commen_supercell_matrix_3_1'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_3_1'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10162,7 +10164,7 @@ save_cell.commen_supercell_matrix_3_1
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10179,7 +10181,7 @@ save_cell.commen_supercell_matrix_3_2
 
     _definition.id                '_cell.commen_supercell_matrix_3_2'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_3_2'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10189,7 +10191,7 @@ save_cell.commen_supercell_matrix_3_2
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10206,7 +10208,7 @@ save_cell.commen_supercell_matrix_3_3
 
     _definition.id                '_cell.commen_supercell_matrix_3_3'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_3_3'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10216,7 +10218,7 @@ save_cell.commen_supercell_matrix_3_3
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          1
     _units.code                   none
     _method.purpose               Evaluation
@@ -18654,7 +18656,7 @@ save_
         2024-12-12
         Technical fixes (JRH)
 ;
-         3.2.5                    2026-05-02
+         3.2.5                    2026-06-18
 ;
         _SPECIAL_FUNC categories, replaced by:
         _DISPLACE_SAWTOOTH
@@ -18733,8 +18735,14 @@ save_
         Changed the _category_key.name  of DIFFRN_REFLN and REFLN to
         _diffrn_refln.id and _refln.id, respectively.
 
+        2026-06-15        
         Added key _superspace_group.id and linked key
         _superspace_group_symop.superspace_group_id
 
         Added linked non-key _structure.superspace_group_id
+
+        Explicitly deprecated the ATOM_SITES_DISPLACE_FOURIER category.
+
+        Changed the content type of _cell.commen_supercell_matrix* data items
+        from 'Integer' to 'Real'.
 ;
