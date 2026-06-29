@@ -25,11 +25,11 @@ data_CIF_MS
     _dictionary.formalism         Modulated
     _dictionary.class             Instance
     _dictionary.version           3.2.5
-    _dictionary.date              2026-05-02
+    _dictionary.date              2026-06-18
     _dictionary.uri               http://www.iucr.org/cif/dic/cif_ms.dic
-    _dictionary.ddl_conformance   4.1.0
+    _dictionary.ddl_conformance   4.2.0
     _dictionary.licensing_SPDX    CC-BY-4.0
-    _dictionary.namespace         ModStruct
+    _dictionary.namespace         CifCore
     _description.text
 ;
        The DICTIONARY group encompassing the definitions of data items
@@ -42,7 +42,7 @@ save_CIF_MS_HEAD
     _definition.id                CIF_MS_HEAD
     _definition.scope             Category
     _definition.class             Head
-    _definition.update            2025-12-05
+    _definition.update            2026-06-18
     _description.text
 ;
       Encompasses groups of categories applicable to modulated structures.
@@ -52,8 +52,8 @@ save_CIF_MS_HEAD
 
     _import.get
         [
-         {'dupl':Ignore  'file':multi_block_core.dic  'mode':Full
-          'save':MULTIBLOCK_CORE}
+         {'dupl':Ignore  'file':cif_core_multiblock.dic  'mode':Full
+          'save':CIF_CORE_MULTIBLOCK_HEAD}
          {'dupl':Ignore  'file':cif_twin.dic  'mode':Full  'save':CIF_TWIN_HEAD}
         ]
 
@@ -898,7 +898,7 @@ save_atom_site_anharmonic_adp_fourier.wave_vector_seq_id
 
     _definition.id
         '_atom_site_anharmonic_ADP_Fourier.wave_vector_seq_id'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
        A numeric code identifying the wave vectors of the Fourier terms
@@ -913,7 +913,7 @@ save_atom_site_anharmonic_adp_fourier.wave_vector_seq_id
     _type.source                  Related
     _type.container               Single
     _type.contents                Integer
-    _enumeration.range            0:
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -2212,7 +2212,7 @@ save_atom_site_displace_fourier.wave_vector_seq_id
         '_atom_site_displace_Fourier.wave_vector_seq_id'
     _alias.definition_id
         '_atom_site_displace_Fourier_wave_vector_seq_id'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
       A numeric code identifying the wave vectors of the Fourier terms
@@ -2229,7 +2229,7 @@ save_atom_site_displace_fourier.wave_vector_seq_id
     _type.source                  Related
     _type.container               Single
     _type.contents                Integer
-    _enumeration.range            0:
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -2928,7 +2928,7 @@ save_ATOM_SITE_DISPLACE_ORTHO
     _definition.id                ATOM_SITE_DISPLACE_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-06-04
+    _definition.update            2026-06-15
     _description.text
 ;
       Data items in the ATOM_SITE_DISPLACE_ORTHO category record
@@ -2996,11 +2996,11 @@ save_ATOM_SITE_DISPLACE_ORTHO
          _atom_site_Fourier_wave_vector.seq_id
          _atom_site_Fourier_wave_vector.q_coeff_seq_id
          _atom_site_Fourier_wave_vector.q_coeff
-            0  [1]  [0]
-            1  [1]  [1]
-            2  [1]  [2]
-            3  [1]  [3]
-            4  [1]  [4]
+            1  [1]  [0]
+            2  [1]  [1]
+            3  [1]  [2]
+            4  [1]  [3]
+            5  [1]  [4]
 
         # - - - - data truncated for brevity - - - -
 
@@ -3024,16 +3024,16 @@ save_ATOM_SITE_DISPLACE_ORTHO
          _atom_sites_ortho.wave_vector_seq_id_list
          _atom_sites_ortho.coeff_cos_list
          _atom_sites_ortho.coeff_sin_list
-         o1  [0 1]      [-3.322 0]        [0 4.323]
-         o2  [0 1]      [-20.803 11.454]  [0 31.365]
-         o3  [0 1]      [0.497 0]         [0 1.774]
-         o4  [0 1]      [0 1.287]         [0 0]
-         o5  [0 1 2]    [0 0.199 0]       [0 0 1.417]
-         o6  [0 1 2]    [-0.870 0 2.020]  [0 -1.611 0]
-         o7  [0 1]      [2.069 0]         [0 3.249]
-         o8  [0 1]      [0 1.414]         [0 0]
-         o9  [0 1 2]    [0 2.271 0]       [0 0 2.267]
-         o10 [0 1 2]    [2.187 0 1.973]   [0 2.785 0]
+         o1  [1 2]      [-3.322 0]        [0 4.323]
+         o2  [1 2]      [-20.803 11.454]  [0 31.365]
+         o3  [1 2]      [0.497 0]         [0 1.774]
+         o4  [1 2]      [0 1.287]         [0 0]
+         o5  [1 2 3]    [0 0.199 0]       [0 0 1.417]
+         o6  [1 2 3]    [-0.870 0 2.020]  [0 -1.611 0]
+         o7  [1 2]      [2.069 0]         [0 3.249]
+         o8  [1 2]      [0 1.414]         [0 0]
+         o9  [1 2 3]    [0 2.271 0]       [0 0 2.267]
+         o10 [1 2 3]    [2.187 0 1.973]   [0 2.785 0]
 
         loop_
          _atom_site_displace_ortho.id
@@ -4850,7 +4850,7 @@ save_atom_site_fourier_wave_vector.seq_id
 
     _definition.id                '_atom_site_Fourier_wave_vector.seq_id'
     _alias.definition_id          '_atom_site_Fourier_wave_vector_seq_id'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
       A numeric code identifying the wave vectors defined in
@@ -4862,7 +4862,7 @@ save_atom_site_fourier_wave_vector.seq_id
     _type.source                  Related
     _type.container               Single
     _type.contents                Integer
-    _enumeration.range            0:
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -5416,7 +5416,7 @@ save_atom_site_occ_fourier.wave_vector_seq_id
 
     _definition.id                '_atom_site_occ_Fourier.wave_vector_seq_id'
     _alias.definition_id          '_atom_site_occ_Fourier_wave_vector_seq_id'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
       A numeric code identifying the wave vectors of the Fourier terms
@@ -5431,7 +5431,7 @@ save_atom_site_occ_fourier.wave_vector_seq_id
     _type.source                  Related
     _type.container               Single
     _type.contents                Integer
-    _enumeration.range            0:
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -6654,7 +6654,7 @@ save_atom_site_rot_fourier.wave_vector_seq_id
 
     _definition.id                '_atom_site_rot_Fourier.wave_vector_seq_id'
     _alias.definition_id          '_atom_site_rot_Fourier_wave_vector_seq_id'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
       A numeric code identifying the wave vectors of the Fourier terms
@@ -6669,7 +6669,7 @@ save_atom_site_rot_fourier.wave_vector_seq_id
     _type.source                  Related
     _type.container               Single
     _type.contents                Integer
-    _enumeration.range            0:
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -8553,7 +8553,7 @@ save_atom_site_u_fourier.wave_vector_seq_id
 
     _definition.id                '_atom_site_U_Fourier.wave_vector_seq_id'
     _alias.definition_id          '_atom_site_U_Fourier_wave_vector_seq_id'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
       A numeric code identifying the wave vectors of the Fourier terms
@@ -8568,7 +8568,7 @@ save_atom_site_u_fourier.wave_vector_seq_id
     _type.source                  Related
     _type.container               Single
     _type.contents                Integer
-    _enumeration.range            0:
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -9766,7 +9766,9 @@ save_ATOM_SITES_DISPLACE_FOURIER
     _definition.id                ATOM_SITES_DISPLACE_FOURIER
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2024-08-09
+    _definition_replaced.id       1
+    _definition_replaced.by       .
+    _definition.update            2026-06-15
     _description.text
 ;
       Data items in the ATOM_SITES_DISPLACE_FOURIER category record
@@ -10205,7 +10207,7 @@ save_ATOM_SITES_ORTHO
     _definition.id                ATOM_SITES_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2024-08-09
+    _definition.update            2026-06-15
     _description.text
 ;
 
@@ -10256,11 +10258,11 @@ save_ATOM_SITES_ORTHO
      _atom_site_Fourier_wave_vector.seq_id
      _atom_site_Fourier_wave_vector.q_coeff_seq_id
      _atom_site_Fourier_wave_vector.q_coeff
-        0  [1]  [0]
-        1  [1]  [1]
-        2  [1]  [2]
-        3  [1]  [3]
-        4  [1]  [4]
+        1  [1]  [0]
+        2  [1]  [1]
+        3  [1]  [2]
+        4  [1]  [3]
+        5  [1]  [4]
 
     # - - - - data truncated for brevity - - - -
 
@@ -10278,16 +10280,16 @@ save_ATOM_SITES_ORTHO
      _atom_sites_ortho.wave_vector_seq_id_list
      _atom_sites_ortho.coeff_cos_list
      _atom_sites_ortho.coeff_sin_list
-     o1  [0 1]      [-3.322 0]        [0 4.323]
-     o2  [0 1]      [-20.803 11.454]  [0 31.365]
-     o3  [0 1]      [0.497 0]         [0 1.774]
-     o4  [0 1]      [0 1.287]         [0 0]
-     o5  [0 1 2]    [0 0.199 0]       [0 0 1.417]
-     o6  [0 1 2]    [-0.870 0 2.020]  [0 -1.611 0]
-     o7  [0 1]      [2.069 0]         [0 3.249]
-     o8  [0 1]      [0 1.414]         [0 0]
-     o9  [0 1 2]    [0 2.271 0]       [0 0 2.267]
-     o10 [0 1 2]    [2.187 0 1.973]   [0 2.785 0]
+     o1  [1 2]      [-3.322 0]        [0 4.323]
+     o2  [1 2]      [-20.803 11.454]  [0 31.365]
+     o3  [1 2]      [0.497 0]         [0 1.774]
+     o4  [1 2]      [0 1.287]         [0 0]
+     o5  [1 2 3]    [0 0.199 0]       [0 0 1.417]
+     o6  [1 2 3]    [-0.870 0 2.020]  [0 -1.611 0]
+     o7  [1 2]      [2.069 0]         [0 3.249]
+     o8  [1 2]      [0 1.414]         [0 0]
+     o9  [1 2 3]    [0 2.271 0]       [0 0 2.267]
+     o10 [1 2 3]    [2.187 0 1.973]   [0 2.785 0]
 
     # - - - - data truncated for brevity - - - -
 
@@ -10368,7 +10370,7 @@ save_
 save_atom_sites_ortho.wave_vector_seq_id_list
 
     _definition.id                '_atom_sites_ortho.wave_vector_seq_id_list'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
       A list of numeric codes that identifies the harmonics chosen for the
@@ -10382,7 +10384,8 @@ save_atom_sites_ortho.wave_vector_seq_id_list
     _type.container               List
     _type.dimension               '[]'
     _type.contents                Integer
-    _enumeration.default          [0]
+    _enumeration.range            1:
+    _enumeration.default          [1]
     _units.code                   none
 
 save_
@@ -10484,7 +10487,7 @@ save_
 save_cell.commen_supercell_matrix
 
     _definition.id                '_cell.commen_supercell_matrix'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
       For commensurately modulated structures the transformation, T,
@@ -10502,7 +10505,7 @@ save_cell.commen_supercell_matrix
     _type.source                  Derived
     _type.container               Matrix
     _type.dimension               '[3,3]'
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          [
                                    [1  0  0]  [0  1  0]  [0  0  1]
                                   ]
@@ -10516,10 +10519,10 @@ save_cell.commen_supercell_matrix
     _cell.commen_supercell_matrix =                                           \
       [ [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
         c.commen_supercell_matrix_1_3],                                       \
-        [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
-        c.commen_supercell_matrix_1_3],                                       \
-        [c.commen_supercell_matrix_1_1, c.commen_supercell_matrix_1_2,        \
-        c.commen_supercell_matrix_1_3] ]
+        [c.commen_supercell_matrix_2_1, c.commen_supercell_matrix_2_2,        \
+        c.commen_supercell_matrix_2_3],                                       \
+        [c.commen_supercell_matrix_3_1, c.commen_supercell_matrix_3_2,        \
+        c.commen_supercell_matrix_3_3] ]
 ;
 
 save_
@@ -10528,7 +10531,7 @@ save_cell.commen_supercell_matrix_1_1
 
     _definition.id                '_cell.commen_supercell_matrix_1_1'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_1_1'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10538,7 +10541,7 @@ save_cell.commen_supercell_matrix_1_1
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          1
     _units.code                   none
     _method.purpose               Evaluation
@@ -10555,7 +10558,7 @@ save_cell.commen_supercell_matrix_1_2
 
     _definition.id                '_cell.commen_supercell_matrix_1_2'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_1_2'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10565,7 +10568,7 @@ save_cell.commen_supercell_matrix_1_2
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10582,7 +10585,7 @@ save_cell.commen_supercell_matrix_1_3
 
     _definition.id                '_cell.commen_supercell_matrix_1_3'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_1_3'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10592,7 +10595,7 @@ save_cell.commen_supercell_matrix_1_3
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10609,7 +10612,7 @@ save_cell.commen_supercell_matrix_2_1
 
     _definition.id                '_cell.commen_supercell_matrix_2_1'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_2_1'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10619,7 +10622,7 @@ save_cell.commen_supercell_matrix_2_1
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10636,7 +10639,7 @@ save_cell.commen_supercell_matrix_2_2
 
     _definition.id                '_cell.commen_supercell_matrix_2_2'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_2_2'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10646,7 +10649,7 @@ save_cell.commen_supercell_matrix_2_2
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          1
     _units.code                   none
     _method.purpose               Evaluation
@@ -10663,7 +10666,7 @@ save_cell.commen_supercell_matrix_2_3
 
     _definition.id                '_cell.commen_supercell_matrix_2_3'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_2_3'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10673,7 +10676,7 @@ save_cell.commen_supercell_matrix_2_3
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10690,7 +10693,7 @@ save_cell.commen_supercell_matrix_3_1
 
     _definition.id                '_cell.commen_supercell_matrix_3_1'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_3_1'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10700,7 +10703,7 @@ save_cell.commen_supercell_matrix_3_1
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10717,7 +10720,7 @@ save_cell.commen_supercell_matrix_3_2
 
     _definition.id                '_cell.commen_supercell_matrix_3_2'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_3_2'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10727,7 +10730,7 @@ save_cell.commen_supercell_matrix_3_2
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          0
     _units.code                   none
     _method.purpose               Evaluation
@@ -10744,7 +10747,7 @@ save_cell.commen_supercell_matrix_3_3
 
     _definition.id                '_cell.commen_supercell_matrix_3_3'
     _alias.definition_id          '_jana_cell_commen_supercell_matrix_3_3'
-    _definition.update            2025-10-28
+    _definition.update            2026-06-15
     _description.text
 ;
      Element of _cell.commen_supercell_matrix.
@@ -10754,7 +10757,7 @@ save_cell.commen_supercell_matrix_3_3
     _type.purpose                 Number
     _type.source                  Derived
     _type.container               Single
-    _type.contents                Integer
+    _type.contents                Real
     _enumeration.default          1
     _units.code                   none
     _method.purpose               Evaluation
@@ -18282,6 +18285,24 @@ save_SUPERSPACE_GROUP
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               SUPERSPACE_GROUP
+    _category_key.name            '_superspace_group.id'
+
+save_
+
+save_superspace_group.id
+
+    _definition.id                '_superspace_group.id'
+    _definition.update            2026-06-07
+    _description.text
+;
+    Arbitrary unique identifier for a superspace group.
+;
+    _name.category_id             superspace_group
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -18437,7 +18458,7 @@ save_SUPERSPACE_GROUP_SYMOP
     _definition.id                SUPERSPACE_GROUP_SYMOP
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2025-06-04
+    _definition.update            2026-06-07
     _description.text
 ;
       The SUPERSPACE_GROUP_SYMOP category contains information about the
@@ -18445,7 +18466,12 @@ save_SUPERSPACE_GROUP_SYMOP
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               SUPERSPACE_GROUP_SYMOP
-    _category_key.name            '_superspace_group_symop.id'
+
+    loop_
+      _category_key.name
+         '_superspace_group_symop.id'
+         '_superspace_group_symop.superspace_group_id'
+
     _description_example.case
 ;
     #\#CIF_2.0
@@ -18454,6 +18480,7 @@ save_SUPERSPACE_GROUP_SYMOP
 
     _space_group.crystal_system              trigonal
     _superspace_group.name                   'R-3m(00\g)0s'
+    _superspace_group.id                     SSG_01
 
     loop_
      _superspace_group_symop.id
@@ -18536,6 +18563,24 @@ save_superspace_group_symop.operation_algebraic
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Code
+
+save_
+
+save_superspace_group_symop.superspace_group_id
+
+    _definition.id                '_superspace_group_symop.superspace_group_id'
+    _definition.update            2026-06-07
+    _description.text
+;
+    A code which identifies the superspace group to which the symop belongs.
+;
+    _name.category_id             superspace_group_symop
+    _name.object_id               superspace_group_id
+    _name.linked_item_id          '_superspace_group.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -18783,6 +18828,24 @@ save_twin_refln.index_m_list
 
 _twin_refln.index_m_list = temp.index_m_list[0:_cell.modulation_dimension - 1]
 ;
+
+save_
+
+save_structure.superspace_group_id
+
+    _definition.id                '_structure.superspace_group_id'
+    _definition.update            2026-06-15
+    _description.text
+;
+    A code which identifies the superspace group describing the structure.
+;
+    _name.category_id             structure
+    _name.object_id               superspace_group_id
+    _name.linked_item_id          '_superspace_group.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -19128,7 +19191,7 @@ save_
         2024-12-12
         Technical fixes (JRH)
 ;
-         3.2.5                    2026-05-02
+         3.2.5                    2026-06-18
 ;
         _SPECIAL_FUNC categories, replaced by:
         _DISPLACE_SAWTOOTH
@@ -19237,4 +19300,20 @@ save_
         ATOM_SITE_U_LEGENDRE
         ATOM_SITE_U_ORTHO
         ATOM_SITE_U_XHARM
+
+        2026-06-15        
+        Added key _superspace_group.id and linked key
+        _superspace_group_symop.superspace_group_id
+
+        Added linked non-key _structure.superspace_group_id
+
+        2026-06-18
+
+        Explicitly deprecated the ATOM_SITES_DISPLACE_FOURIER category.
+
+        Changed the content type of _cell.commen_supercell_matrix* data items
+        from 'Integer' to 'Real'.
+
+        Restricted the values of _atom_site_Fourier_wave_vector.seq_id and
+        linked data items to positive integers.
 ;
