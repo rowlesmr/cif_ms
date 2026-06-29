@@ -5798,6 +5798,24 @@ save_atom_site_occ_fourier_param.sin_su
 
 save_
 
+save_atom_site_occ_fourier_param.structure_id
+
+    _definition.id                '_atom_site_occ_Fourier_param.structure_id'
+    _definition.update            2026-06-03
+    _description.text
+;
+    A code identifying the structure to which this atom site belongs.
+;
+    _name.category_id             atom_site_occ_Fourier_param
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
+
+save_
+
 save_ATOM_SITE_OCC_LEGENDRE
 
     _definition.id                ATOM_SITE_OCC_LEGENDRE
