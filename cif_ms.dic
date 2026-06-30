@@ -13739,7 +13739,7 @@ save_CELL_WAVE_VECTORS
     _definition.id                CELL_WAVE_VECTORS
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2024-08-09
+    _definition.update            2026-06-30
     _description.text
 ;
       Data items in the CELL_WAVE_VECTORS category record overall details
@@ -13751,6 +13751,25 @@ save_CELL_WAVE_VECTORS
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               CELL_WAVE_VECTORS
+    _category_key.name            '_cell_wave_vectors.id'
+
+save_
+
+save_cell_wave_vectors.id
+
+    _definition.id                '_cell_wave_vectors.id'
+    _definition.update            2026-06-30
+    _description.text
+;
+    Unique identifier for the overall details under which cell wave 
+    vectors were measured.
+;
+    _name.category_id             cell_wave_vectors
+    _name.object_id               id
+    _type.purpose                 Key
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -18784,4 +18803,5 @@ save_
         2026-06-30
 
         Added _cell_wave_vector.structure_id as linked key.
+        Added _cell_wave_vectors.id as Set key
 ;
