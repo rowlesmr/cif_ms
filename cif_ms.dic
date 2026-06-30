@@ -13540,6 +13540,25 @@ save_cell_wave_vector.structure_id
 
 save_
 
+save_cell_wave_vector.vectors_id
+
+    _definition.id                '_cell_wave_vector.structure_id'
+    _definition.update            2026-06-30
+    _description.text
+;
+    A code identifying the overall measurement conditions associated with 
+    the cell wave vector.
+;
+    _name.category_id             cell_wave_vector
+    _name.object_id               vectors_id
+    _name.linked_item_id          '_cell_wave_vectors.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
+
+save_
+
 save_cell_wave_vector.x
 
     _definition.id                '_cell_wave_vector.x'
@@ -18803,5 +18822,6 @@ save_
         2026-06-30
 
         Added _cell_wave_vector.structure_id as linked key.
-        Added _cell_wave_vectors.id as Set key
+        Added _cell_wave_vectors.id as Set key.
+        Added _cell_wave_vector.vectors_id as linked, non key data name.
 ;
