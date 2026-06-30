@@ -17803,6 +17803,9 @@ save_REFLN
       are extensions of the core CIF dictionary definitions to the
       indexing of reflections used in the refinement by
       higher-dimensional components.
+      
+      _refln.structure_id may be omitted if only one _structure.id 
+      is present in the same data block
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               REFLN
@@ -18047,6 +18050,9 @@ save_refln.structure_id
 ;
     A code identifying the crystallographic structure associated with this
     reflection.
+    
+    This data name may be omitted if only one _structure.id is present in 
+    the same data block.
 ;
     _name.category_id             refln
     _name.object_id               structure_id
