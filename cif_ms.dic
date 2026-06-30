@@ -4388,7 +4388,7 @@ save_ATOM_SITE_FOURIER_WAVE_VECTOR
     _definition.id                ATOM_SITE_FOURIER_WAVE_VECTOR
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2024-08-09
+    _definition.update            2026-06-30
     _description.text
 ;
       Data items in the ATOM_SITE_FOURIER_WAVE_VECTOR category record
@@ -4415,10 +4415,16 @@ save_ATOM_SITE_FOURIER_WAVE_VECTOR
       the value of _atom_site_Fourier_wave_vector.q_coeff_seq_id matching
       the corresponding value of _cell_wave_vector.seq_id.
 
+      _atom_site_Fourier_wave_vector.structure_id may be omitted if only one
+      _structure.id is present in the same data block.
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_FOURIER_WAVE_VECTOR
-    _category_key.name            '_atom_site_Fourier_wave_vector.seq_id'
+
+    loop_
+      _category_key.name
+         '_atom_site_Fourier_wave_vector.seq_id'
+         '_atom_site_Fourier_wave_vector.structure_id'
 
 save_
 
@@ -4948,6 +4954,28 @@ save_atom_site_fourier_wave_vector.seq_id
     _type.contents                Integer
     _enumeration.range            1:
     _units.code                   none
+
+save_
+
+save_atom_site_fourier_wave_vector.structure_id
+
+    _definition.id                '_atom_site_Fourier_wave_vector.structure_id'
+    _definition.update            2026-06-30
+    _description.text
+;
+    A code identifying the crystallographic structure associated with the
+    atom site Fourier wave vector.
+
+    This data name may be omitted if only one _structure.id is present in
+    the same data block.
+;
+    _name.category_id             atom_site_Fourier_wave_vector
+    _name.object_id               structure_id
+    _name.linked_item_id          '_structure.id'
+    _type.purpose                 Link
+    _type.source                  Assigned
+    _type.container               Single
+    _type.contents                Word
 
 save_
 
@@ -19712,6 +19740,7 @@ save_
 
         2026-06-30
 
+        Added _atom_site_Fourier_wave_vector.structure_id as linked key.
         Added _cell_wave_vector.structure_id as linked key.
         Added _cell_wave_vectors.id as Set key.
         Added _cell_wave_vector.vectors_id as linked, non key data name.
