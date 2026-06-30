@@ -71,8 +71,8 @@ save_ATOM_SITE
     used in crystallographic structure studies.  Items in this
     dictionary enhance those in cif_core.cif to cover modulated
     structures.
-    
-    _atom_site.structure_id may be omitted if only one _structure.id 
+
+    _atom_site.structure_id may be omitted if only one _structure.id
     is present in the same data block.
 ;
     _name.category_id             ATOM
@@ -9113,8 +9113,8 @@ save_ATOM_SITES_AXES
       displacements and rotations of atoms and rigid groups. Details
       for individual atom sites are described by data items in
       the ATOM_SITE_DISPLACE_ and ATOM_SITE_ROT_ categories.
-      
-      _atom_sites_axes.structure_id may be omitted if only one 
+
+      _atom_sites_axes.structure_id may be omitted if only one
       _structure.id is present in the same data block.
 ;
     _name.category_id             CIF_MS_HEAD
@@ -9216,8 +9216,8 @@ save_atom_sites_axes.structure_id
 ;
     A code identifying the crystallographic structure associated with the
     atom sites.
-    
-    This data name may be omitted if only one _structure.id is present in 
+
+    This data name may be omitted if only one _structure.id is present in
     the same data block.
 ;
     _name.category_id             atom_sites_axes
@@ -9322,8 +9322,8 @@ save_ATOM_SITES_MODULATION
 ;
       Data items in the ATOM_SITES_MODULATION category record details
       common to the modulation of atom sites in a modulated structure.
-      
-      _atom_sites_modulation.structure_id may be omitted if only one 
+
+      _atom_sites_modulation.structure_id may be omitted if only one
       _structure.id is present in the same data block.
 ;
     _name.category_id             CIF_MS_HEAD
@@ -9706,8 +9706,8 @@ save_atom_sites_modulation.structure_id
 ;
     A code identifying the crystallographic structure associated with the
     atom sites.
-    
-    This data name may be omitted if only one _structure.id is present 
+
+    This data name may be omitted if only one _structure.id is present
     in the same data block.
 ;
     _name.category_id             atom_sites_modulation
@@ -9737,8 +9737,8 @@ save_ATOM_SITES_ORTHO
       The functions are constructed selecting Fourier harmonics
       until a desired degree of orthogonality and completeness is
       reached (see _atom_site_occ_crenel.ortho_eps).
-      
-      _atom_sites_ortho.structure_id may be omitted if only one 
+
+      _atom_sites_ortho.structure_id may be omitted if only one
       _structure.id is present in the same data block.
 
       References: Petricek, V., Van Der Lee & Evain, M. (1995).
@@ -9901,8 +9901,8 @@ save_atom_sites_ortho.structure_id
 ;
     A code identifying the crystallographic structure associated with the
     atom sites.
-    
-    This data name may be omitted if only one _structure.id is present 
+
+    This data name may be omitted if only one _structure.id is present
     in the same data block.
 ;
     _name.category_id             atom_sites_ortho
