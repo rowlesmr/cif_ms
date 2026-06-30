@@ -25,7 +25,7 @@ data_CIF_MS
     _dictionary.formalism         Modulated
     _dictionary.class             Instance
     _dictionary.version           3.2.5
-    _dictionary.date              2026-06-18
+    _dictionary.date              2026-06-29
     _dictionary.uri               http://www.iucr.org/cif/dic/cif_ms.dic
     _dictionary.ddl_conformance   4.2.0
     _dictionary.licensing_SPDX    CC-BY-4.0
@@ -264,6 +264,7 @@ save_ATOM_SITE_ANHARMONIC_ADP
 
     loop_
       _description_example.case
+      _description_example.detail
 ;
         #\#CIF_2.0
 
@@ -344,9 +345,8 @@ save_ATOM_SITE_ANHARMONIC_ADP
           N2  C333  0.0006(17)
 
         # - - - - data truncated for brevity - - - -
-
-        #=======================================================================
-
+;
+;
         Example based on the article:
         Laura Canadillas-Delgado, Lidia Mazzuca, Oscar Fabelo and
         Juan Rodriguez-Carvajal (2019) IUCrJ. 6, 105-115.
@@ -401,9 +401,8 @@ save_ATOM_SITE_ANHARMONIC_ADP
           Sb1 D3333  0.24(12)
 
         # - - - - data truncated for brevity - - - -
-
-        #=====================================================================
-
+;
+;
         Example based on the article:
         Oxana V. Magdysyuk, Jurgen Nuss and Martin Jansen (2013)
         Acta Cryst. B 69, 547-555. doi:10.1107/S2052519213029436
@@ -466,9 +465,8 @@ save_ATOM_SITE_ANHARMONIC_ADP
           Hf1 F333333  0.09(2)
 
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+;
         Example based on the article:
         Alexei Bosak, Volodymir Svitlyk, Alla Arakcheeva, Roman Burkovskiy,
         Vadim Diadkin, Krystian Roleder and Dmitry Chernyshov (2020)
@@ -705,9 +703,9 @@ save_ATOM_SITE_ANHARMONIC_ADP_FOURIER
           10 Co1   C333  1            0     0.005(3)
           11 O2    C111  1  -0.0016(13)   0.0020(14)
           12 O2    C112  1   -0.0001(5)    0.0003(5)
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Laura Canadillas-Delgado, Lidia Mazzuca, Oscar Fabelo and
         Juan Rodriguez-Carvajal (2019) IUCrJ. 6, 105-115.
@@ -992,9 +990,9 @@ save_ATOM_SITE_ANHARMONIC_ADP_FOURIER_PARAM
           12  -0.0001(5)    0.0003(5)
 
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Laura Canadillas-Delgado, Lidia Mazzuca, Oscar Fabelo and
         Juan Rodriguez-Carvajal (2019) IUCrJ. 6, 105-115.
@@ -1959,9 +1957,9 @@ save_ATOM_SITE_DISPLACE_FOURIER
          Sb_y_6  Sb  y  6   0.00496(16)  -0.00435(17)
          Sb_z_6  Sb  z  6   0.00287(9)    0.00189(9)
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -2260,9 +2258,9 @@ save_ATOM_SITE_DISPLACE_FOURIER_PARAM
          Sb_z_6  0.00287(9)    0.00189(9)
 
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Michel Evain, Vaclav Pericek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -2608,9 +2606,9 @@ save_ATOM_SITE_DISPLACE_LEGENDRE
          O1_L_z_2 O1  z  2     0
          O1_L_x_3 O1  x  3     0.262(9)
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Luis Elcoro, Olivier P\'erez, J. M. Perez-Mato and V\'aclav
         Pet\<r\'i\<cek (2012) Acta Cryst. B68, 341-355.
@@ -2922,9 +2920,9 @@ save_ATOM_SITE_DISPLACE_ORTHO
          Zn1_o3_z   Zn1  z  o3   0.00101(7)
          Zn1_o6_z   Zn1  z  o6  -0.00069(5)
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Hanna Lind, Magnus Bostrom, Vaclav Petricek and Sven Lidin (2003)
         Acta Cryst. B59, 720-729. doi:10.1107/S0108768103019694
@@ -3166,6 +3164,7 @@ save_ATOM_SITE_DISPLACE_SAWTOOTH
 
     loop_
       _description_example.case
+      _description_example.detail
 ;
        #\#CIF_2.0
 
@@ -3203,9 +3202,8 @@ save_ATOM_SITE_DISPLACE_SAWTOOTH
        O2  -0.165(8)  0  0  0.640(4)  0.969(8)
        O3  -0.245(6)  0  0  0.588(4)         1
        # - - - - data truncated for brevity - - - -
-
-       #=======================================================================
-
+;
+;
        Example based on the article:
        Andrei Mironov, V\'aclav Pet\<r\'i\<cek, Nellie Khasanova and Evgenie
        Antipov (2016) Acta Cryst. B72, 395-403. doi:10.1107/S2052520616005643
@@ -3229,9 +3227,8 @@ save_ATOM_SITE_DISPLACE_SAWTOOTH
        O2  [-0.165(8) 0 0]  0.640(4)  0.969(8)
        O3  [-0.245(6) 0 0]  0.588(4)         1
        # - - - - data truncated for brevity - - - -
-
-       #=======================================================================
-
+;
+;
        Example based on the article:
        Andrei Mironov, V\'aclav Pet\<r\'i\<cek, Nellie Khasanova and Evgenie
        Antipov (2016) Acta Cryst. B72, 395-403. doi:10.1107/S2052520616005643
@@ -3658,9 +3655,9 @@ save_ATOM_SITE_DISPLACE_XHARM
           O6wXhz4 O6w    z  4      0.008(3)
 
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Tamara J. Bernarchuk, Wolfgang Hornfeck, Vasyl Kinzhybalo, Zhengyang
         Zhou, Michal Dusek and Adam Pietraszko (2019)
@@ -3924,9 +3921,9 @@ save_ATOM_SITE_DISPLACE_ZIGZAG
       _atom_site_displace_zigzag.w
       S1  [-0.750 0 0]  0  0.5
       Pb1 [-0.625 0 0]  0  0.5
-
-    #==========================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article:
     Luis Elcoro, J. M. Perez-Mato, Karen Friese, V\'aclav Pet\<r\'i\<cek,
     Ton\<ci Bal\'i-\<Zun\'ic and Lars Arnskov Olsen (2012)
@@ -4866,9 +4863,9 @@ save_ATOM_SITE_OCC_CRENEL
      O2 -0.0080(15)  0.1375
 
     # - - - - data truncated for brevity - - - -
-
-    #==========================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article:
     Luis Elcoro, Olivier P\'erez, J. M. Perez-Mato and V\'aclav Pet\<r\'i\<cek
     (2012) Acta Cryst. B68, 341-355. doi:10.1107/S0108768112018095
@@ -5098,9 +5095,9 @@ save_ATOM_SITE_OCC_FOURIER
          Sb_o_4  Sb  4  -0.017(6)   0.042(5)
 
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -5286,9 +5283,9 @@ save_ATOM_SITE_OCC_FOURIER_PARAM
          Sb_o_4 -0.017(6)   0.042(5)
 
          # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -6157,19 +6154,19 @@ save_ATOM_SITE_ROT_FOURIER
           R_a1_2     CPS  a1  1  2  0.60  0.78
           R_a2_2     CPS  a2  1  2  0.70  0.62
           R_y_2_nm   CPS  a2  2  2  0.70  0.10
-
-        #Rigid rotations and translations of the molecule (CPS) are
-        #expressed in two different ways: as movements around and
-        #along the crystallographic axes (R_x_1...R_z_2 and
-        #T_x_1...T_z_1) or through nine normal modes
-        #(R_a1_1...R_y_2_nm) and T_a2_1...T_y_2_nm). The rotation
-        #R_y_2_nm and the translation T_y_2_nm are around and along
-        #the b-axis but are independent, in the sense that they do not
-        #belong to the same Fourier series, of T_y_1, T_y_2 and
-        #R_y_1. Therefore they need a different (but trivial)
-        #transformation matrix.
-
-        #======================================================================
+;
+    _description_example.detail
+;
+        Rigid rotations and translations of the molecule (CPS) are
+        expressed in two different ways: as movements around and
+        along the crystallographic axes (R_x_1...R_z_2 and
+        T_x_1...T_z_1) or through nine normal modes
+        (R_a1_1...R_y_2_nm) and T_a2_1...T_y_2_nm). The rotation
+        R_y_2_nm and the translation T_y_2_nm are around and along
+        the b-axis but are independent, in the sense that they do not
+        belong to the same Fourier series, of T_y_1, T_y_2 and
+        R_y_1. Therefore they need a different (but trivial)
+        transformation matrix.
 
         Example based on the article:
         F.J. Z\'u\~niga, J.M. P\'erez-Mato and T. Breczewski(1993)
@@ -6563,19 +6560,19 @@ save_ATOM_SITE_ROT_FOURIER_PARAM
           R_a1_2    0.60  0.78
           R_a2_2    0.70  0.62
           R_y_2_nm  0.70  0.10
-
-        #Rigid rotations and translations of the molecule (CPS) are
-        #expressed in two different ways: as movements around and
-        #along the crystallographic axes (R_x_1...R_z_2 and
-        #T_x_1...T_z_1) or through nine normal modes
-        #(R_a1_1...R_y_2_nm) and T_a2_1...T_y_2_nm). The rotation
-        #R_y_2_nm and the translation T_y_2_nm are around and along
-        #the b-axis but are independent, in the sense that they do not
-        #belong to the same Fourier series, of T_y_1, T_y_2 and
-        #R_y_1. Therefore they need a different (but trivial)
-        #transformation matrix.
-
-        #======================================================================
+;
+    _description_example.detail
+;
+        Rigid rotations and translations of the molecule (CPS) are
+        expressed in two different ways: as movements around and
+        along the crystallographic axes (R_x_1...R_z_2 and
+        T_x_1...T_z_1) or through nine normal modes
+        (R_a1_1...R_y_2_nm) and T_a2_1...T_y_2_nm). The rotation
+        R_y_2_nm and the translation T_y_2_nm are around and along
+        the b-axis but are independent, in the sense that they do not
+        belong to the same Fourier series, of T_y_1, T_y_2 and
+        R_y_1. Therefore they need a different (but trivial)
+        transformation matrix.
 
         Example based on the article:
         F.J. Z\'u\~niga, J.M. P\'erez-Mato and T. Breczewski(1993)
@@ -7984,9 +7981,9 @@ save_ATOM_SITE_U_FOURIER
          Pb_U13_3  Pb  U13  3  -0.00023(18)  -0.0004(2)
          Pb_U23_3  Pb  U23  3   0.00004(15)  -0.00305(16)
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -8242,9 +8239,9 @@ save_ATOM_SITE_U_FOURIER_PARAM
          Pb_U13_3 -0.00023(18)  -0.0004(2)
          Pb_U23_3  0.00004(15)  -0.00305(16)
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -8558,9 +8555,9 @@ save_ATOM_SITE_U_LEGENDRE
          12 Zn5  U23  2     0
 
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Rie T. Fredrickson and Daniel C. Fredrickson (2023)
         Acta Cryst. B79, 775-789. doi:10.1107/S2052520623005292
@@ -8959,9 +8956,9 @@ save_ATOM_SITE_U_XHARM
          22 O6w  U12  2     0.001(3)
          23 O6w  U13  2    -0.003(3)
          24 O6w  U23  2    -0.003(2)
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Tamara J. Bernarchuk, Wolfgang Hornfeck, Vasyl Kinzhybalo, Zhengyang
         Zhou, Michal Dusek and Adam Pietraszko (2019)
@@ -9140,9 +9137,9 @@ save_ATOM_SITES_AXES
          ;
 
         # - - - - data truncated for brevity - - - -
-
-        #======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         F.J. Z\'u\~niga, J.M. P\'erez-Mato and T. Breczewski(1993)
         Acta Cryst. B49, 1060-1068. doi:10.1107/S0108768193008195
@@ -9313,9 +9310,9 @@ save_ATOM_SITES_MODULATION
         _atom_sites_modulation.global_phase_t_1            0.125
 
         # - - - - data truncated for brevity - - - -
-
-        #=======================================================================
-
+;
+    _description_example.detail
+;
         Example based on the article:
         Noelia De La Pinta, Paul Benjamin Klar, Tomasz Breczewski & Gotzon
         Madariaga (2020)
@@ -9754,9 +9751,9 @@ save_ATOM_SITES_ORTHO
      o10 [1 2 3]    [2.187 0 1.973]   [0 2.785 0]
 
     # - - - - data truncated for brevity - - - -
-
-    #==========================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article:
     Hanna Lind, Magnus Bostrom, Vaclav Petricek and Sven Lidin (2003)
     Acta Cryst. B59, 720-729. doi:10.1107/S0108768103019694
@@ -9932,9 +9929,9 @@ save_CELL
     _cell.commen_supercell_matrix  [[1 0 -3] [0 1 0] [1 0 1]]
 
     # - - - - data truncated for brevity - - - -
-
-    #==========================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article:
     Noelia De La Pinta, Paul Benjamin Klar, Tomasz Breczewski & Gotzon
     Madariaga (2020)
@@ -10359,9 +10356,9 @@ save_CELL_SUBSYSTEM
        [0 0 0 0 0 0 0 0 0 0 0]]
 
     # - - - - data truncated for brevity - - - -
-
-    #==========================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article:
     O. Gourdon, V. Petricek, M. Dusek, P. Bezdicka, S.  Durovic, D. Gyepesovad
     and M. Evain (1999)
@@ -15304,9 +15301,9 @@ save_GEOM_ANGLE
      C04  C05  F08  .  .  .  118.9(4)  118.1(4)  119.4(4)  ?
 
     # - - - - data truncated for brevity - - - -
-
-    #=======================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article:
     Andreas Schonleber, Sander van Smaalen, Hans-Christoph Weiss and Andreas J.
     Kesel (2014) Acta Cryst. B70, 652-659. doi:10.1107/S2052520614007707
@@ -15634,9 +15631,9 @@ save_GEOM_BOND
      Ba2b  O1a  .  14_5545   2.746(7)   2.691(9)   2.803(9)  ?
 
     # - - - - data truncated for brevity - - - -
-
-    #==========================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article:
     Heribert A. Graetsch, Chandra Shekar Pandey, Jurgen Schreuer,
     Manfred Burianek and Manfred Muhlberg (2014) Acta Cryst. B70, 743-749.
@@ -16538,9 +16535,9 @@ save_GEOM_TORSION
      O10  C01  C02  C06  .  .  .  .   -8.8(3)   -179.9(3)  179.4(3)
 
     # - - - - data truncated for brevity - - - -
-
-    #==========================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article:
     Andreas Schonleber, Sander van Smaalen, Hans-Christoph Weiss and Andreas J.
     Kesel (2014) Acta Cryst. B70, 652-659. doi:10.1107/S2052520614007707
@@ -17968,9 +17965,9 @@ save_SUPERSPACE_GROUP_SYMOP
      19 -x1+2/3,-x2+1/3,-x3+1/3,-x4
 
     # - - - - data truncated for brevity - - - -
-
-    #=======================================================================
-
+;
+    _description_example.detail
+;
     Example based on the article: O. Gourdon, V. Petricek, M. Dusek,
     P. Bezdicka, S.  Durovic, D. Gyepesovad and M. Evain (1999) Acta
     Cryst. B55, 841-848. doi:10.1107/S0108768199006485 Determination
@@ -18653,7 +18650,7 @@ save_
         2024-12-12
         Technical fixes (JRH)
 ;
-         3.2.5                    2026-06-18
+         3.2.5                    2026-06-29
 ;
         _SPECIAL_FUNC categories, replaced by:
         _DISPLACE_SAWTOOTH
@@ -18732,7 +18729,7 @@ save_
         Changed the _category_key.name  of DIFFRN_REFLN and REFLN to
         _diffrn_refln.id and _refln.id, respectively.
 
-        2026-06-15        
+        2026-06-15
         Added key _superspace_group.id and linked key
         _superspace_group_symop.superspace_group_id
 
