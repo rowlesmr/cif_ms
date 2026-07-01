@@ -25,7 +25,7 @@ data_CIF_MS
     _dictionary.formalism         Modulated
     _dictionary.class             Instance
     _dictionary.version           3.2.5
-    _dictionary.date              2026-06-29
+    _dictionary.date              2026-06-18
     _dictionary.uri               http://www.iucr.org/cif/dic/cif_ms.dic
     _dictionary.ddl_conformance   4.2.0
     _dictionary.licensing_SPDX    CC-BY-4.0
@@ -260,12 +260,10 @@ save_ATOM_SITE_ANHARMONIC_ADP
     loop_
       _category_key.name
          '_atom_site_anharmonic_ADP.atom_site_label'
-         '_atom_site_anharmonic_ADP.structure_id'
          '_atom_site_anharmonic_ADP.tens_elem'
 
     loop_
       _description_example.case
-      _description_example.detail
 ;
         #\#CIF_2.0
 
@@ -346,8 +344,9 @@ save_ATOM_SITE_ANHARMONIC_ADP
           N2  C333  0.0006(17)
 
         # - - - - data truncated for brevity - - - -
-;
-;
+
+        #=======================================================================
+
         Example based on the article:
         Laura Canadillas-Delgado, Lidia Mazzuca, Oscar Fabelo and
         Juan Rodriguez-Carvajal (2019) IUCrJ. 6, 105-115.
@@ -402,8 +401,9 @@ save_ATOM_SITE_ANHARMONIC_ADP
           Sb1 D3333  0.24(12)
 
         # - - - - data truncated for brevity - - - -
-;
-;
+
+        #=====================================================================
+
         Example based on the article:
         Oxana V. Magdysyuk, Jurgen Nuss and Martin Jansen (2013)
         Acta Cryst. B 69, 547-555. doi:10.1107/S2052519213029436
@@ -466,8 +466,9 @@ save_ATOM_SITE_ANHARMONIC_ADP
           Hf1 F333333  0.09(2)
 
         # - - - - data truncated for brevity - - - -
-;
-;
+
+        #======================================================================
+
         Example based on the article:
         Alexei Bosak, Volodymir Svitlyk, Alla Arakcheeva, Roman Burkovskiy,
         Vadim Diadkin, Krystian Roleder and Dmitry Chernyshov (2020)
@@ -532,24 +533,6 @@ save_atom_site_anharmonic_adp.coeff_su
     _units.code                   none
 
     _import.get                   [{'file':templ_attr.cif  'save':general_su}]
-
-save_
-
-save_atom_site_anharmonic_adp.structure_id
-
-    _definition.id                '_atom_site_anharmonic_ADP.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_anharmonic_ADP
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
 
 save_
 
@@ -653,7 +636,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_FOURIER
     _definition.id                ATOM_SITE_ANHARMONIC_ADP_FOURIER
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
        Data items in the ATOM_SITE_ANHARMONIC_ADP_FOURIER category record
@@ -662,12 +645,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_FOURIER
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ANHARMONIC_ADP_FOURIER
-
-    loop_
-      _category_key.name
-         '_atom_site_anharmonic_ADP_Fourier.id'
-         '_atom_site_anharmonic_ADP_Fourier.structure_id'
-
+    _category_key.name            '_atom_site_anharmonic_ADP_Fourier.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -727,9 +705,9 @@ save_ATOM_SITE_ANHARMONIC_ADP_FOURIER
           10 Co1   C333  1            0     0.005(3)
           11 O2    C111  1  -0.0016(13)   0.0020(14)
           12 O2    C112  1   -0.0001(5)    0.0003(5)
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Laura Canadillas-Delgado, Lidia Mazzuca, Oscar Fabelo and
         Juan Rodriguez-Carvajal (2019) IUCrJ. 6, 105-115.
@@ -746,8 +724,7 @@ save_atom_site_anharmonic_adp_fourier.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-          The code, along with _atom_site_anharmonic_adp_fourier.structure_id,
-          that identifies an atom in a loop in which the Fourier
+          The code the that identifies an atom in a loop in which the Fourier
           components of the tensors that parameterize its anharmonic ADP
           modulation are listed. This code must match the _atom_site.label of
           the associated coordinate list and conform to the rules described
@@ -779,25 +756,6 @@ save_atom_site_anharmonic_adp_fourier.id
     _type.source                  Related
     _type.container               Single
     _type.contents                Code
-
-save_
-
-save_atom_site_anharmonic_adp_fourier.structure_id
-
-    _definition.id
-        '_atom_site_anharmonic_ADP_Fourier.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_anharmonic_ADP_Fourier
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
 
 save_
 
@@ -927,7 +885,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_FOURIER_PARAM
     _definition.id                ATOM_SITE_ANHARMONIC_ADP_FOURIER_PARAM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-02
     _description.text
 ;
           Data items in the ATOM_SITE_ANHARMONIC_ADP_FOURIER_PARAM category
@@ -957,12 +915,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_FOURIER_PARAM
 ;
     _name.category_id             ATOM_SITE_ANHARMONIC_ADP_FOURIER
     _name.object_id               ATOM_SITE_ANHARMONIC_ADP_FOURIER_PARAM
-
-    loop_
-      _category_key.name
-         '_atom_site_anharmonic_ADP_Fourier_param.id'
-         '_atom_site_anharmonic_ADP_Fourier_param.structure_id'
-
+    _category_key.name            '_atom_site_anharmonic_ADP_Fourier_param.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -1039,9 +992,9 @@ save_ATOM_SITE_ANHARMONIC_ADP_FOURIER_PARAM
           12  -0.0001(5)    0.0003(5)
 
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Laura Canadillas-Delgado, Lidia Mazzuca, Oscar Fabelo and
         Juan Rodriguez-Carvajal (2019) IUCrJ. 6, 105-115.
@@ -1266,31 +1219,12 @@ save_atom_site_anharmonic_adp_fourier_param.sin_su
 
 save_
 
-save_atom_site_anharmonic_adp_fourier_param.structure_id
-
-    _definition.id
-        '_atom_site_anharmonic_ADP_Fourier_param.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_anharmonic_ADP_Fourier_param
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_ANHARMONIC_ADP_LEGENDRE
 
     _definition.id                ATOM_SITE_ANHARMONIC_ADP_LEGENDRE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_ANHARMONIC_ADP_LEGENDRE category record
@@ -1300,11 +1234,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_LEGENDRE
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ANHARMONIC_ADP_LEGENDRE
-
-    loop_
-      _category_key.name
-         '_atom_site_anharmonic_ADP_Legendre.id'
-         '_atom_site_anharmonic_ADP_Legendre.structure_id'
+    _category_key.name            '_atom_site_anharmonic_ADP_legendre.id'
 
 save_
 
@@ -1315,8 +1245,7 @@ save_atom_site_anharmonic_adp_legendre.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_anharmonic_adp_Legendre.structure_id,
-      that identifies an atom in a loop in which the Legendre
+      The code the identifies an atom in a loop in which the Legendre
       components of the tensors that parameterize its anharmonic ADP
       modulation are listed. This code must match the _atom_site.label of
       the associated coordinate list and conform to the rules described
@@ -1404,25 +1333,6 @@ save_atom_site_anharmonic_adp_legendre.order
     _type.contents                Integer
     _enumeration.range            0:
     _units.code                   none
-
-save_
-
-save_atom_site_anharmonic_adp_legendre.structure_id
-
-    _definition.id
-        '_atom_site_anharmonic_ADP_Legendre.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_anharmonic_ADP_Legendre
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
 
 save_
 
@@ -1528,7 +1438,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_ORTHO
     _definition.id                ATOM_SITE_ANHARMONIC_ADP_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_ANHARMONIC_ADP_ORTHO category record
@@ -1542,11 +1452,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_ORTHO
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ANHARMONIC_ADP_ORTHO
-
-    loop_
-      _category_key.name
-         '_atom_site_anharmonic_ADP_ortho.id'
-         '_atom_site_anharmonic_ADP_ortho.structure_id'
+    _category_key.name            '_atom_site_anharmonic_ADP_ortho.id'
 
 save_
 
@@ -1655,24 +1561,6 @@ save_atom_site_anharmonic_adp_ortho.id
 
 save_
 
-save_atom_site_anharmonic_adp_ortho.structure_id
-
-    _definition.id                '_atom_site_anharmonic_ADP_ortho.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_anharmonic_ADP_ortho
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_anharmonic_adp_ortho.tens_elem
 
     _definition.id                '_atom_site_anharmonic_ADP_ortho.tens_elem'
@@ -1774,7 +1662,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_XHARM
     _definition.id                ATOM_SITE_ANHARMONIC_ADP_XHARM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_ANHARMONIC_ADP_XHARM category record
@@ -1784,11 +1672,7 @@ save_ATOM_SITE_ANHARMONIC_ADP_XHARM
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ANHARMONIC_ADP_XHARM
-
-    loop_
-      _category_key.name
-         '_atom_site_anharmonic_ADP_xharm.id'
-         '_atom_site_anharmonic_ADP_xharm.structure_id'
+    _category_key.name            '_atom_site_anharmonic_ADP_xharm.id'
 
 save_
 
@@ -1799,8 +1683,7 @@ save_atom_site_anharmonic_adp_xharm.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_anharmonic_adp_xharm.structure_id,
-      that identifies an atom in a loop in which the x-harmonics
+      The code the identifies an atom in a loop in which the x-harmonics
       components of the tensors that parameterize its anharmonic ADP
       modulation are listed. This code must match the _atom_site.label of
       the associated coordinate list and conform to the rules described
@@ -1888,24 +1771,6 @@ save_atom_site_anharmonic_adp_xharm.order
     _type.contents                Integer
     _enumeration.range            0:
     _units.code                   none
-
-save_
-
-save_atom_site_anharmonic_adp_xharm.structure_id
-
-    _definition.id                '_atom_site_anharmonic_ADP_xharm.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_anharmonic_ADP_xharm
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
 
 save_
 
@@ -2009,7 +1874,7 @@ save_ATOM_SITE_DISPLACE_FOURIER
     _definition.id                ATOM_SITE_DISPLACE_FOURIER
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_DISPLACE_FOURIER category record
@@ -2024,12 +1889,7 @@ save_ATOM_SITE_DISPLACE_FOURIER
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_DISPLACE_FOURIER
-
-    loop_
-      _category_key.name
-         '_atom_site_displace_Fourier.id'
-         '_atom_site_displace_Fourier.structure_id'
-
+    _category_key.name            '_atom_site_displace_Fourier.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -2099,9 +1959,9 @@ save_ATOM_SITE_DISPLACE_FOURIER
          Sb_y_6  Sb  y  6   0.00496(16)  -0.00435(17)
          Sb_z_6  Sb  z  6   0.00287(9)    0.00189(9)
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -2122,8 +1982,7 @@ save_atom_site_displace_fourier.atom_site_label
       Modulated parameters are the atom positions (displacive
       modulation), the atomic occupation (occupational modulation)
       and the isotropic or anisotropic (harmonic or anharmonic) ADPs.
-      _atom_site_displace_Fourier.atom_site_label, along with
-      _atom_site_displace_Fourier.structure_id, is the code that
+      _atom_site_displace_Fourier.atom_site_label is the code that
       identifies an atom or rigid group in a loop in which the Fourier
       components of its displacive modulation are listed. In the case
       of a rigid group, this list would only include the translational
@@ -2234,24 +2093,6 @@ save_atom_site_displace_fourier.matrix_seq_id
 
 save_
 
-save_atom_site_displace_fourier.structure_id
-
-    _definition.id                '_atom_site_displace_Fourier.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_displace_Fourier
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_displace_fourier.wave_vector_seq_id
 
     _definition.id
@@ -2285,7 +2126,7 @@ save_ATOM_SITE_DISPLACE_FOURIER_PARAM
     _definition.id                ATOM_SITE_DISPLACE_FOURIER_PARAM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-07-31
     _description.text
 ;
       Data items in the ATOM_SITE_DISPLACE_FOURIER_PARAM category
@@ -2327,12 +2168,7 @@ save_ATOM_SITE_DISPLACE_FOURIER_PARAM
 ;
     _name.category_id             ATOM_SITE_DISPLACE_FOURIER
     _name.object_id               ATOM_SITE_DISPLACE_FOURIER_PARAM
-
-    loop_
-      _category_key.name
-         '_atom_site_displace_Fourier_param.id'
-         '_atom_site_displace_Fourier_param.structure_id'
-
+    _category_key.name            '_atom_site_displace_Fourier_param.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -2424,9 +2260,9 @@ save_ATOM_SITE_DISPLACE_FOURIER_PARAM
          Sb_z_6  0.00287(9)    0.00189(9)
 
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Michel Evain, Vaclav Pericek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -2647,31 +2483,12 @@ save_atom_site_displace_fourier_param.sin_su
 
 save_
 
-save_atom_site_displace_fourier_param.structure_id
-
-    _definition.id
-        '_atom_site_displace_Fourier_param.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_displace_Fourier_param
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_DISPLACE_LEGENDRE
 
     _definition.id                ATOM_SITE_DISPLACE_LEGENDRE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2025-06-04
     _description.text
 ;
       The set of harmonic functions used in the Fourier series
@@ -2732,12 +2549,7 @@ save_ATOM_SITE_DISPLACE_LEGENDRE
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_DISPLACE_LEGENDRE
-
-    loop_
-      _category_key.name
-         '_atom_site_displace_Legendre.id'
-         '_atom_site_displace_Legendre.structure_id'
-
+    _category_key.name            '_atom_site_displace_Legendre.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -2796,9 +2608,9 @@ save_ATOM_SITE_DISPLACE_LEGENDRE
          O1_L_z_2 O1  z  2     0
          O1_L_x_3 O1  x  3     0.262(9)
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Luis Elcoro, Olivier P\'erez, J. M. Perez-Mato and V\'aclav
         Pet\<r\'i\<cek (2012) Acta Cryst. B68, 341-355.
@@ -2818,8 +2630,7 @@ save_atom_site_displace_legendre.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_displace_Legendre.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the Legendre components of its displacive modulation are listed.
       This code must match the _atom_site.label of the associated
       coordinate list and conform to the rules described in _atom_site.label.
@@ -2980,30 +2791,12 @@ save_atom_site_displace_legendre.order
 
 save_
 
-save_atom_site_displace_legendre.structure_id
-
-    _definition.id                '_atom_site_displace_Legendre.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_displace_Legendre
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_DISPLACE_ORTHO
 
     _definition.id                ATOM_SITE_DISPLACE_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2026-06-15
     _description.text
 ;
       Data items in the ATOM_SITE_DISPLACE_ORTHO category record
@@ -3031,12 +2824,7 @@ save_ATOM_SITE_DISPLACE_ORTHO
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_DISPLACE_ORTHO
-
-    loop_
-      _category_key.name
-         '_atom_site_displace_ortho.id'
-         '_atom_site_displace_ortho.structure_id'
-
+    _category_key.name            '_atom_site_displace_ortho.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -3134,9 +2922,9 @@ save_ATOM_SITE_DISPLACE_ORTHO
          Zn1_o3_z   Zn1  z  o3   0.00101(7)
          Zn1_o6_z   Zn1  z  o6  -0.00069(5)
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Hanna Lind, Magnus Bostrom, Vaclav Petricek and Sven Lidin (2003)
         Acta Cryst. B59, 720-729. doi:10.1107/S0108768103019694
@@ -3154,8 +2942,7 @@ save_atom_site_displace_ortho.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_displace_ortho.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the ortho components of its displacive modulation are listed.
       This code must match the _atom_site.label of the associated
       coordinate list andconform to the rules described in _atom_site.label.
@@ -3315,24 +3102,6 @@ save_atom_site_displace_ortho.matrix_seq_id
 
 save_
 
-save_atom_site_displace_ortho.structure_id
-
-    _definition.id                '_atom_site_displace_ortho.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_displace_ortho
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_DISPLACE_SAWTOOTH
 
     _definition.id                ATOM_SITE_DISPLACE_SAWTOOTH
@@ -3393,15 +3162,10 @@ save_ATOM_SITE_DISPLACE_SAWTOOTH
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_DISPLACE_SAWTOOTH
-
-    loop_
-      _category_key.name
-         '_atom_site_displace_sawtooth.atom_site_label'
-         '_atom_site_displace_sawtooth.structure_id'
+    _category_key.name            '_atom_site_displace_sawtooth.atom_site_label'
 
     loop_
       _description_example.case
-      _description_example.detail
 ;
        #\#CIF_2.0
 
@@ -3439,8 +3203,9 @@ save_ATOM_SITE_DISPLACE_SAWTOOTH
        O2  -0.165(8)  0  0  0.640(4)  0.969(8)
        O3  -0.245(6)  0  0  0.588(4)         1
        # - - - - data truncated for brevity - - - -
-;
-;
+
+       #=======================================================================
+
        Example based on the article:
        Andrei Mironov, V\'aclav Pet\<r\'i\<cek, Nellie Khasanova and Evgenie
        Antipov (2016) Acta Cryst. B72, 395-403. doi:10.1107/S2052520616005643
@@ -3464,8 +3229,9 @@ save_ATOM_SITE_DISPLACE_SAWTOOTH
        O2  [-0.165(8) 0 0]  0.640(4)  0.969(8)
        O3  [-0.245(6) 0 0]  0.588(4)         1
        # - - - - data truncated for brevity - - - -
-;
-;
+
+       #=======================================================================
+
        Example based on the article:
        Andrei Mironov, V\'aclav Pet\<r\'i\<cek, Nellie Khasanova and Evgenie
        Antipov (2016) Acta Cryst. B72, 395-403. doi:10.1107/S2052520616005643
@@ -3483,8 +3249,7 @@ save_atom_site_displace_sawtooth.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_displace_sawtooth.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the sawtooth function that describes its displacive modulation is
       being defined. This code must match the _atom_site.label of the
       associated coordinate list and conform to the rules described in
@@ -3728,24 +3493,6 @@ save_atom_site_displace_sawtooth.matrix_seq_id
 
 save_
 
-save_atom_site_displace_sawtooth.structure_id
-
-    _definition.id                '_atom_site_displace_sawtooth.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_displace_sawtooth
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_displace_sawtooth.w
 
     _definition.id                '_atom_site_displace_sawtooth.w'
@@ -3787,7 +3534,7 @@ save_ATOM_SITE_DISPLACE_XHARM
     _definition.id                ATOM_SITE_DISPLACE_XHARM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       The set of harmonic functions used in the Fourier series
@@ -3846,12 +3593,7 @@ save_ATOM_SITE_DISPLACE_XHARM
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_DISPLACE_XHARM
-
-    loop_
-      _category_key.name
-         '_atom_site_displace_xharm.id'
-         '_atom_site_displace_xharm.structure_id'
-
+    _category_key.name            '_atom_site_displace_xharm.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -3916,9 +3658,9 @@ save_ATOM_SITE_DISPLACE_XHARM
           O6wXhz4 O6w    z  4      0.008(3)
 
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Tamara J. Bernarchuk, Wolfgang Hornfeck, Vasyl Kinzhybalo, Zhengyang
         Zhou, Michal Dusek and Adam Pietraszko (2019)
@@ -3937,8 +3679,7 @@ save_atom_site_displace_xharm.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-       The code, along with _atom_site_displace_xharm.structure_id, that
-       identifies an atom or rigid group in a loop in which the
+       The code that identifies an atom or rigid group in a loop in which the
        x-harmonics components of its displacive modulation are listed. In
        the case of a rigid group, this list would only include the
        translational part of its displacive modulation. The rotational part
@@ -4106,24 +3847,6 @@ save_atom_site_displace_xharm.order
 
 save_
 
-save_atom_site_displace_xharm.structure_id
-
-    _definition.id                '_atom_site_displace_xharm.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_displace_xharm
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_DISPLACE_ZIGZAG
 
     _definition.id                ATOM_SITE_DISPLACE_ZIGZAG
@@ -4165,12 +3888,7 @@ save_ATOM_SITE_DISPLACE_ZIGZAG
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_DISPLACE_ZIGZAG
-
-    loop_
-      _category_key.name
-         '_atom_site_displace_zigzag.atom_site_label'
-         '_atom_site_displace_zigzag.structure_id'
-
+    _category_key.name            '_atom_site_displace_zigzag.atom_site_label'
     _description_example.case
 ;
     #\#CIF_2.0
@@ -4206,9 +3924,9 @@ save_ATOM_SITE_DISPLACE_ZIGZAG
       _atom_site_displace_zigzag.w
       S1  [-0.750 0 0]  0  0.5
       Pb1 [-0.625 0 0]  0  0.5
-;
-    _description_example.detail
-;
+
+    #==========================================================================
+
     Example based on the article:
     Luis Elcoro, J. M. Perez-Mato, Karen Friese, V\'aclav Pet\<r\'i\<cek,
     Ton\<ci Bal\'i-\<Zun\'ic and Lars Arnskov Olsen (2012)
@@ -4225,8 +3943,7 @@ save_atom_site_displace_zigzag.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_displace_zigzag.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the zigzag function that describes its displacive modulation is
       being defined. This code must match the _atom_site.label of the
       associated coordinate list and conform to the rules described in
@@ -4327,24 +4044,6 @@ save_atom_site_displace_zigzag.matrix_seq_id
 
     _import.get
         [{'file':templ_attr.cif  'save':transf_matrix_id}]
-
-save_
-
-save_atom_site_displace_zigzag.structure_id
-
-    _definition.id                '_atom_site_displace_zigzag.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_displace_zigzag
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
 
 save_
 
@@ -5104,7 +4803,7 @@ save_ATOM_SITE_OCC_CRENEL
     _definition.id                ATOM_SITE_OCC_CRENEL
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2025-06-04
     _description.text
 ;
       Data items in the ATOM_SITE_OCC_CRENEL category record
@@ -5123,12 +4822,7 @@ save_ATOM_SITE_OCC_CRENEL
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_OCC_CRENEL
-
-    loop_
-      _category_key.name
-         '_atom_site_occ_crenel.atom_site_label'
-         '_atom_site_occ_crenel.structure_id'
-
+    _category_key.name            '_atom_site_occ_crenel.atom_site_label'
     _description_example.case
 ;
     #\#CIF_2.0
@@ -5172,9 +4866,9 @@ save_ATOM_SITE_OCC_CRENEL
      O2 -0.0080(15)  0.1375
 
     # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+    #==========================================================================
+
     Example based on the article:
     Luis Elcoro, Olivier P\'erez, J. M. Perez-Mato and V\'aclav Pet\<r\'i\<cek
     (2012) Acta Cryst. B68, 341-355. doi:10.1107/S0108768112018095
@@ -5191,8 +4885,7 @@ save_atom_site_occ_crenel.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_occ_crenel.structure_id, that
-      identifies an atom or rigid group in a loop in
+      The code that identifies an atom or rigid group in a loop in
       which the parameters of the crenel function that describes its
       occupational modulation are listed. This code must match
       the _atom_site.label of the associated coordinate list and
@@ -5283,24 +4976,6 @@ save_atom_site_occ_crenel.ortho_eps
 
 save_
 
-save_atom_site_occ_crenel.structure_id
-
-    _definition.id                '_atom_site_occ_crenel.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_occ_crenel
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_occ_crenel.w
 
     _definition.id                '_atom_site_occ_crenel.w'
@@ -5347,7 +5022,7 @@ save_ATOM_SITE_OCC_FOURIER
     _definition.id                ATOM_SITE_OCC_FOURIER
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_OCC_FOURIER category record details
@@ -5358,12 +5033,7 @@ save_ATOM_SITE_OCC_FOURIER
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_OCC_FOURIER
-
-    loop_
-      _category_key.name
-         '_atom_site_occ_Fourier.id'
-         '_atom_site_occ_Fourier.structure_id'
-
+    _category_key.name            '_atom_site_occ_Fourier.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -5428,9 +5098,9 @@ save_ATOM_SITE_OCC_FOURIER
          Sb_o_4  Sb  4  -0.017(6)   0.042(5)
 
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -5447,8 +5117,7 @@ save_atom_site_occ_fourier.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_occ_fourier.structure_id, that
-      identifies an atom in a loop in which the Fourier
+      The code that identifies an atom in a loop in which the Fourier
       components of its occupational modulation are listed. This code must
       match the _atom_site.label of the associated coordinate list and
       conform to the rules described in _atom_site.label.
@@ -5483,24 +5152,6 @@ save_atom_site_occ_fourier.id
 
 save_
 
-save_atom_site_occ_fourier.structure_id
-
-    _definition.id                '_atom_site_occ_Fourier.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_occ_Fourier
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_occ_fourier.wave_vector_seq_id
 
     _definition.id                '_atom_site_occ_Fourier.wave_vector_seq_id'
@@ -5530,7 +5181,7 @@ save_ATOM_SITE_OCC_FOURIER_PARAM
     _definition.id                ATOM_SITE_OCC_FOURIER_PARAM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-07-31
     _description.text
 ;
       Data items in the ATOM_SITE_OCC_FOURIER_PARAM category record
@@ -5559,12 +5210,7 @@ save_ATOM_SITE_OCC_FOURIER_PARAM
 ;
     _name.category_id             ATOM_SITE_OCC_FOURIER
     _name.object_id               ATOM_SITE_OCC_FOURIER_PARAM
-
-    loop_
-      _category_key.name
-         '_atom_site_occ_Fourier_param.id'
-         '_atom_site_occ_Fourier_param.structure_id'
-
+    _category_key.name            '_atom_site_occ_Fourier_param.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -5640,9 +5286,9 @@ save_ATOM_SITE_OCC_FOURIER_PARAM
          Sb_o_4 -0.017(6)   0.042(5)
 
          # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -5856,30 +5502,12 @@ save_atom_site_occ_fourier_param.sin_su
 
 save_
 
-save_atom_site_occ_fourier_param.structure_id
-
-    _definition.id                '_atom_site_occ_Fourier_param.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_occ_Fourier_param
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_OCC_LEGENDRE
 
     _definition.id                ATOM_SITE_OCC_LEGENDRE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_OCC_LEGENDRE category record
@@ -5890,11 +5518,7 @@ save_ATOM_SITE_OCC_LEGENDRE
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_OCC_LEGENDRE
-
-    loop_
-      _category_key.name
-         '_atom_site_occ_Legendre.id'
-         '_atom_site_occ_Legendre.structure_id'
+    _category_key.name            '_atom_site_occ_Legendre.id'
 
 save_
 
@@ -5905,8 +5529,7 @@ save_atom_site_occ_legendre.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_occ_legendre.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the Legendre components of its occupational modulation are listed.
       This code must match the _atom_site.label of the associated coordinate
       list and conform to the rules described in _atom_site.label.
@@ -5996,30 +5619,12 @@ save_atom_site_occ_legendre.order
 
 save_
 
-save_atom_site_occ_legendre.structure_id
-
-    _definition.id                '_atom_site_occ_Legendre.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_occ_Legendre
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_OCC_ORTHO
 
     _definition.id                ATOM_SITE_OCC_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
 
@@ -6039,11 +5644,7 @@ save_ATOM_SITE_OCC_ORTHO
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_OCC_ORTHO
-
-    loop_
-      _category_key.name
-         '_atom_site_occ_ortho.id'
-         '_atom_site_occ_ortho.structure_id'
+    _category_key.name            '_atom_site_occ_ortho.id'
 
 save_
 
@@ -6055,8 +5656,7 @@ save_atom_site_occ_ortho.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_occ_ortho.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the ortho components of its occupational modulation are listed.
       This code must match the _atom_site.label of the associated coordinate
       list and conform to the rules described in _atom_site.label.
@@ -6148,24 +5748,6 @@ save_atom_site_occ_ortho.id
 
 save_
 
-save_atom_site_occ_ortho.structure_id
-
-    _definition.id                '_atom_site_occ_ortho.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_occ_ortho
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_OCC_XHARM
 
     _definition.id                ATOM_SITE_OCC_XHARM
@@ -6182,11 +5764,7 @@ save_ATOM_SITE_OCC_XHARM
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_OCC_XHARM
-
-    loop_
-      _category_key.name
-         '_atom_site_occ_xharm.id'
-         '_atom_site_occ_xharm.structure_id'
+    _category_key.name            '_atom_site_occ_xharm.id'
 
 save_
 
@@ -6197,8 +5775,7 @@ save_atom_site_occ_xharm.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_occ_xharm.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the x-harmonic components of its occupational modulation are listed.
       This code must match the _atom_site.label of the associated coordinate
       list and conform to the rules described in _atom_site.label.
@@ -6288,30 +5865,12 @@ save_atom_site_occ_xharm.order
 
 save_
 
-save_atom_site_occ_xharm.structure_id
-
-    _definition.id                '_atom_site_occ_xharm.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_occ_xharm
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_PHASON
 
     _definition.id                ATOM_SITE_PHASON
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_PHASON category record details
@@ -6322,11 +5881,7 @@ save_ATOM_SITE_PHASON
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_PHASON
-
-    loop_
-      _category_key.name
-         '_atom_site_phason.atom_site_label'
-         '_atom_site_phason.structure_id'
+    _category_key.name            '_atom_site_phason.atom_site_label'
 
 save_
 
@@ -6337,8 +5892,7 @@ save_atom_site_phason.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_phason.structure_id, that
-      identifies an atom or rigid group in a loop in
+      The code that identifies an atom or rigid group in a loop in
       which the phason coefficients are listed. Although this kind of
       correction is intended to be overall, some refinement programs
       (for example, JANA) allow an independent phason correction
@@ -6429,30 +5983,12 @@ save_atom_site_phason.formula
 
 save_
 
-save_atom_site_phason.structure_id
-
-    _definition.id                '_atom_site_phason.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_phason
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_ROT_FOURIER
 
     _definition.id                ATOM_SITE_ROT_FOURIER
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2025-06-04
     _description.text
 ;
       Data items in the ATOM_SITE_ROT_FOURIER category record details
@@ -6466,12 +6002,7 @@ save_ATOM_SITE_ROT_FOURIER
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ROT_FOURIER
-
-    loop_
-      _category_key.name
-         '_atom_site_rot_Fourier.id'
-         '_atom_site_rot_Fourier.structure_id'
-
+    _category_key.name            '_atom_site_rot_Fourier.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -6587,7 +6118,7 @@ save_ATOM_SITE_ROT_FOURIER
          _atom_site_displace_Fourier.wave_vector_seq_id
          _atom_site_displace_Fourier_param.modulus
          _atom_site_displace_Fourier_param.phase
-          S_x_1     S      x  .  1  0.00453(2)  0.888(1)
+          S_x_1     S      x  .  1 -0.00453(2)  0.388(1)
           S_y_1     S      y  .  1  0.0000      0.000
           S_z_1     S      z  .  1  0.02053(4)  0.3190(3)
           S_x_2     S      x  .  2  0.0000      0.0000
@@ -6626,19 +6157,19 @@ save_ATOM_SITE_ROT_FOURIER
           R_a1_2     CPS  a1  1  2  0.60  0.78
           R_a2_2     CPS  a2  1  2  0.70  0.62
           R_y_2_nm   CPS  a2  2  2  0.70  0.10
-;
-    _description_example.detail
-;
-        Rigid rotations and translations of the molecule (CPS) are
-        expressed in two different ways: as movements around and
-        along the crystallographic axes (R_x_1...R_z_2 and
-        T_x_1...T_z_1) or through nine normal modes
-        (R_a1_1...R_y_2_nm) and T_a2_1...T_y_2_nm). The rotation
-        R_y_2_nm and the translation T_y_2_nm are around and along
-        the b-axis but are independent, in the sense that they do not
-        belong to the same Fourier series, of T_y_1, T_y_2 and
-        R_y_1. Therefore they need a different (but trivial)
-        transformation matrix.
+
+        #Rigid rotations and translations of the molecule (CPS) are
+        #expressed in two different ways: as movements around and
+        #along the crystallographic axes (R_x_1...R_z_2 and
+        #T_x_1...T_z_1) or through nine normal modes
+        #(R_a1_1...R_y_2_nm) and T_a2_1...T_y_2_nm). The rotation
+        #R_y_2_nm and the translation T_y_2_nm are around and along
+        #the b-axis but are independent, in the sense that they do not
+        #belong to the same Fourier series, of T_y_1, T_y_2 and
+        #R_y_1. Therefore they need a different (but trivial)
+        #transformation matrix.
+
+        #======================================================================
 
         Example based on the article:
         F.J. Z\'u\~niga, J.M. P\'erez-Mato and T. Breczewski(1993)
@@ -6656,8 +6187,7 @@ save_atom_site_rot_fourier.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_rot_fourier.structure_id, that
-      identifies a rigid group in a loop in which the Fourier
+      The code that identifies a rigid group in a loop in which the Fourier
       components of the rotational part of its displacive modulation
       are listed. The translational part (if any) would appear in a
       separate list (see _atom_site_displace_Fourier.atom_site_label).
@@ -6761,24 +6291,6 @@ save_atom_site_rot_fourier.matrix_seq_id
 
 save_
 
-save_atom_site_rot_fourier.structure_id
-
-    _definition.id                '_atom_site_rot_Fourier.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_rot_Fourier
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_rot_fourier.wave_vector_seq_id
 
     _definition.id                '_atom_site_rot_Fourier.wave_vector_seq_id'
@@ -6808,7 +6320,7 @@ save_ATOM_SITE_ROT_FOURIER_PARAM
     _definition.id                ATOM_SITE_ROT_FOURIER_PARAM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2025-06-04
     _description.text
 ;
       Data items in the ATOM_SITE_ROT_FOURIER_PARAM category record
@@ -6849,12 +6361,7 @@ save_ATOM_SITE_ROT_FOURIER_PARAM
 ;
     _name.category_id             ATOM_SITE_ROT_FOURIER
     _name.object_id               ATOM_SITE_ROT_FOURIER_PARAM
-
-    loop_
-      _category_key.name
-         '_atom_site_rot_Fourier_param.id'
-         '_atom_site_rot_Fourier_param.structure_id'
-
+    _category_key.name            '_atom_site_rot_Fourier_param.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -7002,7 +6509,7 @@ save_ATOM_SITE_ROT_FOURIER_PARAM
          _atom_site_displace_Fourier_param.id
          _atom_site_displace_Fourier_param.modulus
          _atom_site_displace_Fourier_param.phase
-          S_x_1     0.00453(2)  0.888(1)
+          S_x_1    -0.00453(2)  0.388(1)
           S_y_1     0.0000      0.000
           S_z_1     0.02053(4)  0.3190(3)
           S_x_2     0.0000      0.0000
@@ -7056,19 +6563,19 @@ save_ATOM_SITE_ROT_FOURIER_PARAM
           R_a1_2    0.60  0.78
           R_a2_2    0.70  0.62
           R_y_2_nm  0.70  0.10
-;
-    _description_example.detail
-;
-        Rigid rotations and translations of the molecule (CPS) are
-        expressed in two different ways: as movements around and
-        along the crystallographic axes (R_x_1...R_z_2 and
-        T_x_1...T_z_1) or through nine normal modes
-        (R_a1_1...R_y_2_nm) and T_a2_1...T_y_2_nm). The rotation
-        R_y_2_nm and the translation T_y_2_nm are around and along
-        the b-axis but are independent, in the sense that they do not
-        belong to the same Fourier series, of T_y_1, T_y_2 and
-        R_y_1. Therefore they need a different (but trivial)
-        transformation matrix.
+
+        #Rigid rotations and translations of the molecule (CPS) are
+        #expressed in two different ways: as movements around and
+        #along the crystallographic axes (R_x_1...R_z_2 and
+        #T_x_1...T_z_1) or through nine normal modes
+        #(R_a1_1...R_y_2_nm) and T_a2_1...T_y_2_nm). The rotation
+        #R_y_2_nm and the translation T_y_2_nm are around and along
+        #the b-axis but are independent, in the sense that they do not
+        #belong to the same Fourier series, of T_y_1, T_y_2 and
+        #R_y_1. Therefore they need a different (but trivial)
+        #transformation matrix.
+
+        #======================================================================
 
         Example based on the article:
         F.J. Z\'u\~niga, J.M. P\'erez-Mato and T. Breczewski(1993)
@@ -7287,30 +6794,12 @@ save_atom_site_rot_fourier_param.sin_su
 
 save_
 
-save_atom_site_rot_fourier_param.structure_id
-
-    _definition.id                '_atom_site_rot_Fourier_param.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_rot_Fourier_param
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_ROT_LEGENDRE
 
     _definition.id                ATOM_SITE_ROT_LEGENDRE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_ROT_LEGENDRE category record
@@ -7323,11 +6812,7 @@ save_ATOM_SITE_ROT_LEGENDRE
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ROT_LEGENDRE
-
-    loop_
-      _category_key.name
-         '_atom_site_rot_Legendre.id'
-         '_atom_site_rot_Legendre.structure_id'
+    _category_key.name            '_atom_site_rot_Legendre.id'
 
 save_
 
@@ -7337,8 +6822,7 @@ save_atom_site_rot_legendre.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_rot_legendre.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the Legendre components of its displacive modulation are listed.
       In the case of a rigid group, this list would only include the
       rotational part of its displacive modulation. The translational
@@ -7498,30 +6982,12 @@ save_atom_site_rot_legendre.order
 
 save_
 
-save_atom_site_rot_legendre.structure_id
-
-    _definition.id                '_atom_site_rot_Legendre.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_rot_Legendre
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_ROT_ORTHO
 
     _definition.id                ATOM_SITE_ROT_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_ROT_ORTHO category record
@@ -7542,11 +7008,7 @@ save_ATOM_SITE_ROT_ORTHO
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ROT_ORTHO
-
-    loop_
-      _category_key.name
-         '_atom_site_rot_ortho.id'
-         '_atom_site_rot_ortho.structure_id'
+    _category_key.name            '_atom_site_rot_ortho.id'
 
 save_
 
@@ -7556,8 +7018,7 @@ save_atom_site_rot_ortho.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_rot_ortho.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the ortho components of its displacive modulation are listed.
       In the case of a rigid group, this list would only include the
       rotational part of its displacive modulation. The translational
@@ -7720,30 +7181,12 @@ save_atom_site_rot_ortho.matrix_seq_id
 
 save_
 
-save_atom_site_rot_ortho.structure_id
-
-    _definition.id                '_atom_site_rot_ortho.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_rot_ortho
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_ROT_SAWTOOTH
 
     _definition.id                ATOM_SITE_ROT_SAWTOOTH
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2025-06-04
     _description.text
 ;
       Data items in the ATOM_SITE_DISPLACE_SAWTOOTH category record
@@ -7771,11 +7214,7 @@ save_ATOM_SITE_ROT_SAWTOOTH
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ROT_SAWTOOTH
-
-    loop_
-      _category_key.name
-         '_atom_site_rot_sawtooth.atom_site_label'
-         '_atom_site_rot_sawtooth.structure_id'
+    _category_key.name            '_atom_site_rot_sawtooth.atom_site_label'
 
 save_
 
@@ -7786,8 +7225,7 @@ save_atom_site_rot_sawtooth.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_rot_sawtooth.structure_id, that
-      identifies a rigid group in a loop in which a sawtooth
+      The code that identifies a rigid group in a loop in which a sawtooth
       function that describes the rotational part of its displacive
       modulation is being defined. This code must match the _atom_site.label
       of the associated coordinate list and conform to the rules described
@@ -8031,24 +7469,6 @@ save_atom_site_rot_sawtooth.matrix_seq_id
 
 save_
 
-save_atom_site_rot_sawtooth.structure_id
-
-    _definition.id                '_atom_site_rot_sawtooth.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_rot_sawtooth
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_rot_sawtooth.w
 
     _definition.id                '_atom_site_rot_sawtooth.w'
@@ -8090,7 +7510,7 @@ save_ATOM_SITE_ROT_XHARM
     _definition.id                ATOM_SITE_ROT_XHARM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_ROT_XHARM category record
@@ -8103,11 +7523,7 @@ save_ATOM_SITE_ROT_XHARM
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ROT_XHARM
-
-    loop_
-      _category_key.name
-         '_atom_site_rot_xharm.id'
-         '_atom_site_rot_xharm.structure_id'
+    _category_key.name            '_atom_site_rot_xharm.id'
 
 save_
 
@@ -8117,8 +7533,7 @@ save_atom_site_rot_xharm.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_rot_xharm.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       the x-harmonics components of its displacive modulation are listed.
       In the case of a rigid group, this list would only include the
       rotational part of its displacive modulation. The translational
@@ -8278,30 +7693,12 @@ save_atom_site_rot_xharm.order
 
 save_
 
-save_atom_site_rot_xharm.structure_id
-
-    _definition.id                '_atom_site_rot_xharm.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_rot_xharm
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_ROT_ZIGZAG
 
     _definition.id                ATOM_SITE_ROT_ZIGZAG
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2025-06-04
     _description.text
 ;
       Data items in the ATOM_SITE_ROT_ZIGZAG category record
@@ -8331,11 +7728,7 @@ save_ATOM_SITE_ROT_ZIGZAG
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_ROT_ZIGZAG
-
-    loop_
-      _category_key.name
-         '_atom_site_rot_zigzag.atom_site_label'
-         '_atom_site_rot_zigzag.structure_id'
+    _category_key.name            '_atom_site_rot_zigzag.atom_site_label'
 
 save_
 
@@ -8345,8 +7738,7 @@ save_atom_site_rot_zigzag.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_rot_zigzag.structure_id, that
-      identifies an atom or rigid group in a loop in which
+      The code that identifies an atom or rigid group in a loop in which
       a zigzag function that describes the rotational part of its displacive
       modulation is being defined. This code must match the _atom_site.label
       of the associated coordinate list and conform to the rules described
@@ -8450,24 +7842,6 @@ save_atom_site_rot_zigzag.matrix_seq_id
 
 save_
 
-save_atom_site_rot_zigzag.structure_id
-
-    _definition.id                '_atom_site_rot_zigzag.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_rot_zigzag
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_rot_zigzag.w
 
     _definition.id                '_atom_site_rot_zigzag.w'
@@ -8508,7 +7882,7 @@ save_ATOM_SITE_U_FOURIER
     _definition.id                ATOM_SITE_U_FOURIER
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_U_FOURIER category record details
@@ -8519,12 +7893,7 @@ save_ATOM_SITE_U_FOURIER
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_U_FOURIER
-
-    loop_
-      _category_key.name
-         '_atom_site_U_Fourier.id'
-         '_atom_site_U_Fourier.structure_id'
-
+    _category_key.name            '_atom_site_U_Fourier.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -8615,9 +7984,9 @@ save_ATOM_SITE_U_FOURIER
          Pb_U13_3  Pb  U13  3  -0.00023(18)  -0.0004(2)
          Pb_U23_3  Pb  U23  3   0.00004(15)  -0.00305(16)
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -8634,8 +8003,7 @@ save_atom_site_u_fourier.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_u_fourier.structure_id, that
-      identifies an atom in a loop in which the Fourier
+      The code that identifies an atom in a loop in which the Fourier
       components of its harmonic ADP modulation are listed.  This code
       must match the _atom_site.label of the associated coordinate list
       and conform to the rules described in _atom_site.label.
@@ -8666,24 +8034,6 @@ save_atom_site_u_fourier.id
     _type.source                  Related
     _type.container               Single
     _type.contents                Code
-
-save_
-
-save_atom_site_u_fourier.structure_id
-
-    _definition.id                '_atom_site_U_Fourier.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_U_Fourier
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
 
 save_
 
@@ -8747,7 +8097,7 @@ save_ATOM_SITE_U_FOURIER_PARAM
     _definition.id                ATOM_SITE_U_FOURIER_PARAM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-07-31
     _description.text
 ;
       Data items in the ATOM_SITE_U_FOURIER_PARAM category record details
@@ -8779,12 +8129,7 @@ save_ATOM_SITE_U_FOURIER_PARAM
 ;
     _name.category_id             ATOM_SITE_U_FOURIER
     _name.object_id               ATOM_SITE_U_FOURIER_PARAM
-
-    loop_
-      _category_key.name
-         '_atom_site_U_Fourier_param.id'
-         '_atom_site_U_Fourier_param.structure_id'
-
+    _category_key.name            '_atom_site_U_Fourier_param.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -8897,9 +8242,9 @@ save_ATOM_SITE_U_FOURIER_PARAM
          Pb_U13_3 -0.00023(18)  -0.0004(2)
          Pb_U23_3  0.00004(15)  -0.00305(16)
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Michel Evain, Vaclav Petricek, Yves Moelo and Colette Maurel (2006)
         Acta Cryst. B62, 775-789. doi:10.1107/S010876810602547X
@@ -9118,30 +8463,12 @@ save_atom_site_u_fourier_param.sin_su
 
 save_
 
-save_atom_site_u_fourier_param.structure_id
-
-    _definition.id                '_atom_site_U_Fourier_param.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_U_Fourier_param
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITE_U_LEGENDRE
 
     _definition.id                ATOM_SITE_U_LEGENDRE
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_U_LEGENDRE category record
@@ -9152,12 +8479,7 @@ save_ATOM_SITE_U_LEGENDRE
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_U_LEGENDRE
-
-    loop_
-      _category_key.name
-         '_atom_site_U_Legendre.id'
-         '_atom_site_U_Legendre.structure_id'
-
+    _category_key.name            '_atom_site_u_Legendre.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -9236,9 +8558,9 @@ save_ATOM_SITE_U_LEGENDRE
          12 Zn5  U23  2     0
 
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Rie T. Fredrickson and Daniel C. Fredrickson (2023)
         Acta Cryst. B79, 775-789. doi:10.1107/S2052520623005292
@@ -9254,8 +8576,7 @@ save_atom_site_u_legendre.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_u_legendre.structure_id, that
-      identifies an atom in a loop in which the Legendre
+      The code that identifies an atom in a loop in which the Legendre
       components of its harmonic ADP modulation are listed. This code must
       match the _atom_site.label of the associated coordinate list and
       conform to the rules described in _atom_site.label.
@@ -9346,24 +8667,6 @@ save_atom_site_u_legendre.order
 
 save_
 
-save_atom_site_u_legendre.structure_id
-
-    _definition.id                '_atom_site_U_Legendre.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_U_Legendre
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_u_legendre.tens_elem
 
     _definition.id                '_atom_site_U_Legendre.tens_elem'
@@ -9400,7 +8703,7 @@ save_ATOM_SITE_U_ORTHO
     _definition.id                ATOM_SITE_U_ORTHO
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_U_ORTHO category record
@@ -9419,11 +8722,7 @@ save_ATOM_SITE_U_ORTHO
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_U_ORTHO
-
-    loop_
-      _category_key.name
-         '_atom_site_U_ortho.id'
-         '_atom_site_U_ortho.structure_id'
+    _category_key.name            '_atom_site_U_ortho.id'
 
 save_
 
@@ -9435,8 +8734,7 @@ save_atom_site_u_ortho.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_u_ortho.structure_id, that
-      identifies an atom in a loop in which the ortho
+      The code that identifies an atom in a loop in which the ortho
       components of its harmonic ADP modulation are listed. This code must
       match the _atom_site.label of the associated coordinate list and
       conform to the rules described in _atom_site.label.
@@ -9528,24 +8826,6 @@ save_atom_site_u_ortho.id
 
 save_
 
-save_atom_site_u_ortho.structure_id
-
-    _definition.id                '_atom_site_U_ortho.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_U_ortho
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_u_ortho.tens_elem
 
     _definition.id                '_atom_site_U_ortho.tens_elem'
@@ -9583,7 +8863,7 @@ save_ATOM_SITE_U_XHARM
     _definition.id                ATOM_SITE_U_XHARM
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-03
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITE_U_XHARM category record details about
@@ -9593,12 +8873,7 @@ save_ATOM_SITE_U_XHARM
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITE_U_XHARM
-
-    loop_
-      _category_key.name
-         '_atom_site_U_xharm.id'
-         '_atom_site_U_xharm.structure_id'
-
+    _category_key.name            '_atom_site_U_xharm.id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -9684,9 +8959,9 @@ save_ATOM_SITE_U_XHARM
          22 O6w  U12  2     0.001(3)
          23 O6w  U13  2    -0.003(3)
          24 O6w  U23  2    -0.003(2)
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         Tamara J. Bernarchuk, Wolfgang Hornfeck, Vasyl Kinzhybalo, Zhengyang
         Zhou, Michal Dusek and Adam Pietraszko (2019)
@@ -9705,8 +8980,7 @@ save_atom_site_u_xharm.atom_site_label
     _definition.update            2025-10-20
     _description.text
 ;
-      The code, along with _atom_site_u_xharm.structure_id, that
-      identifies an atom in a loop in which the x-harmonic
+      The code that identifies an atom in a loop in which the x-harmonic
       components of its harmonic ADP modulation are listed. This code must
       match the _atom_site.label of the associated coordinate list and
       conform to the rules described in _atom_site.label.
@@ -9796,24 +9070,6 @@ save_atom_site_u_xharm.order
 
 save_
 
-save_atom_site_u_xharm.structure_id
-
-    _definition.id                '_atom_site_U_xharm.structure_id'
-    _definition.update            2026-06-03
-    _description.text
-;
-    A code identifying the structure to which this atom site belongs.
-;
-    _name.category_id             atom_site_U_xharm
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_site_u_xharm.tens_elem
 
     _definition.id                '_atom_site_U_xharm.tens_elem'
@@ -9849,7 +9105,7 @@ save_ATOM_SITES_AXES
     _definition.id                ATOM_SITES_AXES
     _definition.scope             Category
     _definition.class             Loop
-    _definition.update            2026-06-15
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITES_AXES category record
@@ -9860,12 +9116,7 @@ save_ATOM_SITES_AXES
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITES_AXES
-
-    loop_
-      _category_key.name
-         '_atom_sites_axes.matrix_seq_id'
-         '_atom_sites_axes.structure_id'
-
+    _category_key.name            '_atom_sites_axes.matrix_seq_id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -9889,9 +9140,9 @@ save_ATOM_SITES_AXES
          ;
 
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #======================================================================
+
         Example based on the article:
         F.J. Z\'u\~niga, J.M. P\'erez-Mato and T. Breczewski(1993)
         Acta Cryst. B49, 1060-1068. doi:10.1107/S0108768193008195
@@ -9946,25 +9197,6 @@ save_atom_sites_axes.matrix_seq_id
     _type.contents                Integer
     _enumeration.range            0:
     _units.code                   none
-
-save_
-
-save_atom_sites_axes.structure_id
-
-    _definition.id                '_atom_sites_axes.structure_id'
-    _definition.update            2026-06-15
-    _description.text
-;
-    A code identifying the crystallographic structure associated with the
-    atom sites.
-;
-    _name.category_id             atom_sites_axes
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
 
 save_
 
@@ -10055,7 +9287,7 @@ save_ATOM_SITES_MODULATION
     _definition.id                ATOM_SITES_MODULATION
     _definition.scope             Category
     _definition.class             Set
-    _definition.update            2026-06-15
+    _definition.update            2025-06-04
     _description.text
 ;
       Data items in the ATOM_SITES_MODULATION category record details
@@ -10063,7 +9295,6 @@ save_ATOM_SITES_MODULATION
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITES_MODULATION
-    _category_key.name            '_atom_sites_modulation.structure_id'
     _description_example.case
 ;
         #\#CIF_2.0
@@ -10082,9 +9313,9 @@ save_ATOM_SITES_MODULATION
         _atom_sites_modulation.global_phase_t_1            0.125
 
         # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+        #=======================================================================
+
         Example based on the article:
         Noelia De La Pinta, Paul Benjamin Klar, Tomasz Breczewski & Gotzon
         Madariaga (2020)
@@ -10433,25 +9664,6 @@ save_atom_sites_modulation.global_phase_t_9
 
 save_
 
-save_atom_sites_modulation.structure_id
-
-    _definition.id                '_atom_sites_modulation.structure_id'
-    _definition.update            2026-06-15
-    _description.text
-;
-    A code identifying the crystallographic structure associated with the
-    atom sites.
-;
-    _name.category_id             atom_sites_modulation
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_ATOM_SITES_ORTHO
 
     _definition.id                ATOM_SITES_ORTHO
@@ -10488,12 +9700,7 @@ save_ATOM_SITES_ORTHO
 ;
     _name.category_id             CIF_MS_HEAD
     _name.object_id               ATOM_SITES_ORTHO
-
-    loop_
-      _category_key.name
-         '_atom_sites_ortho.func_id'
-         '_atom_sites_ortho.structure_id'
-
+    _category_key.name            '_atom_sites_ortho.func_id'
     _description_example.case
 ;
     #\#CIF_2.0
@@ -10547,9 +9754,9 @@ save_ATOM_SITES_ORTHO
      o10 [1 2 3]    [2.187 0 1.973]   [0 2.785 0]
 
     # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+    #==========================================================================
+
     Example based on the article:
     Hanna Lind, Magnus Bostrom, Vaclav Petricek and Sven Lidin (2003)
     Acta Cryst. B59, 720-729. doi:10.1107/S0108768103019694
@@ -10622,25 +9829,6 @@ save_atom_sites_ortho.func_id
 
 save_
 
-save_atom_sites_ortho.structure_id
-
-    _definition.id                '_atom_sites_ortho.structure_id'
-    _definition.update            2026-06-15
-    _description.text
-;
-    A code identifying the crystallographic structure associated with the
-    atom sites.
-;
-    _name.category_id             atom_sites_ortho
-    _name.object_id               structure_id
-    _name.linked_item_id          '_structure.id'
-    _type.purpose                 Link
-    _type.source                  Assigned
-    _type.container               Single
-    _type.contents                Word
-
-save_
-
 save_atom_sites_ortho.wave_vector_seq_id_list
 
     _definition.id                '_atom_sites_ortho.wave_vector_seq_id_list'
@@ -10669,9 +9857,7 @@ save_ATOM_SITES_ROT_FOURIER
     _definition.id                ATOM_SITES_ROT_FOURIER
     _definition.scope             Category
     _definition.class             Set
-    _definition_replaced.id       1
-    _definition_replaced.by       .
-    _definition.update            2026-06-29
+    _definition.update            2024-08-09
     _description.text
 ;
       Data items in the ATOM_SITES_ROT_FOURIER category record
@@ -10689,10 +9875,8 @@ save_
 save_atom_sites_rot_fourier.axes_description
 
     _definition.id                '_atom_sites_rot_Fourier.axes_description'
-    _definition_replaced.id       1
-    _definition_replaced.by       .
     _alias.definition_id          '_atom_sites_rot_Fourier_axes_description'
-    _definition.update            2026-06-29
+    _definition.update            2014-06-27
     _description.text
 ;
       DEPRECATED. This data name should not be used. It has been replaced
@@ -10748,9 +9932,9 @@ save_CELL
     _cell.commen_supercell_matrix  [[1 0 -3] [0 1 0] [1 0 1]]
 
     # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+    #==========================================================================
+
     Example based on the article:
     Noelia De La Pinta, Paul Benjamin Klar, Tomasz Breczewski & Gotzon
     Madariaga (2020)
@@ -11175,9 +10359,9 @@ save_CELL_SUBSYSTEM
        [0 0 0 0 0 0 0 0 0 0 0]]
 
     # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+    #==========================================================================
+
     Example based on the article:
     O. Gourdon, V. Petricek, M. Dusek, P. Bezdicka, S.  Durovic, D. Gyepesovad
     and M. Evain (1999)
@@ -16120,9 +15304,9 @@ save_GEOM_ANGLE
      C04  C05  F08  .  .  .  118.9(4)  118.1(4)  119.4(4)  ?
 
     # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+    #=======================================================================
+
     Example based on the article:
     Andreas Schonleber, Sander van Smaalen, Hans-Christoph Weiss and Andreas J.
     Kesel (2014) Acta Cryst. B70, 652-659. doi:10.1107/S2052520614007707
@@ -16450,9 +15634,9 @@ save_GEOM_BOND
      Ba2b  O1a  .  14_5545   2.746(7)   2.691(9)   2.803(9)  ?
 
     # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+    #==========================================================================
+
     Example based on the article:
     Heribert A. Graetsch, Chandra Shekar Pandey, Jurgen Schreuer,
     Manfred Burianek and Manfred Muhlberg (2014) Acta Cryst. B70, 743-749.
@@ -17354,9 +16538,9 @@ save_GEOM_TORSION
      O10  C01  C02  C06  .  .  .  .   -8.8(3)   -179.9(3)  179.4(3)
 
     # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+    #==========================================================================
+
     Example based on the article:
     Andreas Schonleber, Sander van Smaalen, Hans-Christoph Weiss and Andreas J.
     Kesel (2014) Acta Cryst. B70, 652-659. doi:10.1107/S2052520614007707
@@ -18813,9 +17997,9 @@ save_SUPERSPACE_GROUP_SYMOP
      19 -x1+2/3,-x2+1/3,-x3+1/3,-x4
 
     # - - - - data truncated for brevity - - - -
-;
-    _description_example.detail
-;
+
+    #=======================================================================
+
     Example based on the article: O. Gourdon, V. Petricek, M. Dusek,
     P. Bezdicka, S.  Durovic, D. Gyepesovad and M. Evain (1999) Acta
     Cryst. B55, 841-848. doi:10.1107/S0108768199006485 Determination
@@ -19498,7 +18682,7 @@ save_
         2024-12-12
         Technical fixes (JRH)
 ;
-         3.2.5                    2026-06-29
+         3.2.5                    2026-06-18
 ;
         _SPECIAL_FUNC categories, replaced by:
         _DISPLACE_SAWTOOTH
@@ -19581,47 +18765,6 @@ save_
         Add new key to REFLN: _refln.structure_id, linked to _structure.id.
         Needed to match redefinition in MULTI_BLOCK_CORE.
 
-        2026-06-03
-        Added _structure.id keys to:
-        ATOM_SITE_ANHARMONIC_ADP
-        ATOM_SITE_DISPLACE_SAWTOOTH
-        ATOM_SITE_DISPLACE_ZIGZAG
-        ATOM_SITE_OCC_CRENEL
-        ATOM_SITE_PHASON
-        ATOM_SITE_ROT_SAWTOOTH
-        ATOM_SITE_ROT_ZIGZAG
-
-        ATOM_SITE_ANHARMONIC_ADP_FOURIER
-        ATOM_SITE_ANHARMONIC_ADP_FOURIER_PARAM
-        ATOM_SITE_ANHARMONIC_ADP_LEGENDRE
-        ATOM_SITE_ANHARMONIC_ADP_ORTHO
-        ATOM_SITE_ANHARMONIC_ADP_XHARM
-        ATOM_SITE_DISPLACE_FOURIER
-        ATOM_SITE_DISPLACE_FOURIER_PARAM
-        ATOM_SITE_DISPLACE_LEGENDRE
-        ATOM_SITE_DISPLACE_ORTHO
-        ATOM_SITE_DISPLACE_XHARM
-        ATOM_SITE_OCC_FOURIER
-        ATOM_SITE_OCC_FOURIER_PARAM
-        ATOM_SITE_OCC_LEGENDRE
-        ATOM_SITE_OCC_ORTHO
-        ATOM_SITE_OCC_XHARM
-        ATOM_SITE_ROT_FOURIER
-        ATOM_SITE_ROT_FOURIER_PARAM
-        ATOM_SITE_ROT_LEGENDRE
-        ATOM_SITE_ROT_ORTHO
-        ATOM_SITE_ROT_XHARM
-        ATOM_SITE_U_FOURIER
-        ATOM_SITE_U_FOURIER_PARAM
-        ATOM_SITE_U_LEGENDRE
-        ATOM_SITE_U_ORTHO
-        ATOM_SITE_U_XHARM
-
-        2026-06-15
-        2026-06-15
-        Added linked key *.structure_id data names to ATOM_SITES_AXES,
-        ATOM_SITES_MODULATION, and ATOM_SITES_ORTHO.
-
         Added key _superspace_group.id and linked key
         _superspace_group_symop.superspace_group_id
 
@@ -19636,8 +18779,4 @@ save_
 
         Restricted the values of _atom_site_Fourier_wave_vector.seq_id and
         linked data items to positive integers.
-
-        2026-06-29
-
-        Explicitly deprecated the ATOM_SITES_ROT_FOURIER category.
 ;
